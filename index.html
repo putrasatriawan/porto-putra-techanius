@@ -1,0 +1,1046 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="">
+    <meta name="author"
+          content="">
+    <title>Porto Putra</title>
+    <link rel="stylesheet"
+          href="css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="css/unicons.css">
+    <link rel="stylesheet"
+          href="css/owl.carousel.min.css">
+    <link rel="stylesheet"
+          href="css/owl.theme.default.min.css">
+    <link rel="stylesheet"
+          href="css/tooplate-style.css">
+    <style>
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            user-select: none;
+        }
+
+        .lang-btn {
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 2px solid #474559;
+            background: transparent;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #474559;
+        }
+
+        .lang-btn.active {
+            background: #474559;
+            color: #fff;
+        }
+
+        .dark-mode .lang-btn {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .dark-mode .lang-btn.active {
+            background: #ffc200;
+            border-color: #ffc200;
+            color: #fff;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .dark-mode .skills-section {
+            background: #111;
+        }
+
+        .skills-section h2 {
+            margin-bottom: 40px;
+        }
+
+        .skill-category {
+            margin-bottom: 36px;
+        }
+
+        .skill-category-title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffc200;
+            margin-bottom: 14px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            background: #fff;
+            color: #474559;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-tag:hover {
+            border-color: #ffc200;
+            color: #ffc200;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 194, 0, 0.15);
+        }
+
+        .skill-tag img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+        }
+
+        .skill-tag .skill-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ffc200;
+            flex-shrink: 0;
+        }
+
+        .dark-mode .skill-tag {
+            background: #1a1a1a;
+            color: #ccc;
+            border-color: #333;
+        }
+
+        .dark-mode .skill-tag:hover {
+            border-color: #ffc200;
+            color: #ffc200;
+        }
+
+        /* Highlight cards */
+        .highlight-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s;
+            height: 100%;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-card:hover {
+            border-color: #ffc200;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.12);
+        }
+
+        .highlight-card .icon {
+            font-size: 36px;
+            color: #ffc200;
+            margin-bottom: 12px;
+        }
+
+        .highlight-card h4 {
+            font-size: 2em;
+            color: #474559;
+            margin-bottom: 4px;
+        }
+
+        .highlight-card p {
+            font-size: 14px;
+            color: #888;
+            margin: 0;
+        }
+
+        .dark-mode .highlight-card {
+            background: #1a1a1a;
+            border-color: #333;
+        }
+
+        .dark-mode .highlight-card h4 {
+            color: #fff;
+        }
+
+        /* Contact section */
+        .contact-info {
+            background: linear-gradient(135deg, #474559 0%, #2d2b3d 100%);
+        }
+
+        .contact-info ul li {
+            color: #f0f0f0;
+            font-size: 16px;
+            padding: 4px 0;
+        }
+
+        .contact-info ul li::before {
+            content: "✓ ";
+            color: #ffc200;
+            font-weight: bold;
+        }
+
+        /* Portfolio Cards */
+        .portfolio-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #f0f0f0;
+            cursor: zoom-in;
+            transition: all 0.3s;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .portfolio-card:hover {
+            border-color: #ffc200;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.15);
+        }
+
+        .portfolio-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-img-wrap img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-card:hover .portfolio-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(71, 69, 89, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-overlay i {
+            font-size: 40px;
+            color: #ffc200;
+        }
+
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .dark-mode .portfolio-card {
+            border-color: #333;
+            background: #1a1a1a;
+        }
+
+        /* Contact Cards */
+        .contact-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-card:hover {
+            border-color: #ffc200;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.12);
+        }
+
+        .contact-card-icon {
+            font-size: 40px;
+            color: #ffc200;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .contact-card h5 {
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #474559;
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #474559;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #ffc200 !important;
+        }
+
+        .social-card-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #474559;
+            transition: all 0.3s;
+        }
+
+        .social-card-link img {
+            transition: transform 0.3s;
+        }
+
+        .social-card-link:hover {
+            color: #ffc200 !important;
+        }
+
+        .social-card-link:hover img {
+            transform: scale(1.1);
+        }
+
+        .dark-mode .contact-card {
+            background: #1a1a1a;
+            border-color: #333;
+        }
+
+        .dark-mode .contact-card h5,
+        .dark-mode .contact-link,
+        .dark-mode .social-card-link {
+            color: #ccc;
+        }
+
+        /* Tech grid */
+        .tech-item {
+            transition: transform 0.3s;
+            cursor: default;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-6px);
+        }
+
+        .tech-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 12px;
+            padding: 8px;
+            background: #fff;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: border-color 0.3s;
+        }
+
+        .tech-item:hover img {
+            border-color: #ffc200;
+        }
+
+        .dark-mode .tech-item img {
+            background: #1a1a1a;
+            border-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand"
+               href="index.html"><i class='uil uil-user'></i> Putra</a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about"
+                           class="nav-link"><span data-hover="About"
+                                  data-hover-id="nav-about">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills"
+                           class="nav-link"><span data-hover="Skills"
+                                  data-hover-id="nav-skills">Skills</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio"
+                           class="nav-link"><span data-hover="Portfolio"
+                                  data-hover-id="nav-portfolio">Portfolio</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume"
+                           class="nav-link"><span data-hover="Resume"
+                                  data-hover-id="nav-resume">Resume</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact"
+                           class="nav-link"><span data-hover="Contact"
+                                  data-hover-id="nav-contact">Contact</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4 d-flex align-items-center gap-3"
+                         style="gap:16px; display:flex!important;">
+                        <!-- Language Toggle -->
+                        <div class="lang-toggle mr-3">
+                            <button class="lang-btn active"
+                                    id="btn-en"
+                                    onclick="setLang('en')">EN</button>
+                            <button class="lang-btn"
+                                    id="btn-id"
+                                    onclick="setLang('id')">ID</button>
+                        </div>
+                        <!-- <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                            <i class="color-mode-icon"></i>
+                            Color mode
+                        </div> -->
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center"
+             id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">
+                            <span data-en="Welcome to "
+                                  data-id="Selamat datang di">Welcome to </span>
+                            <span class="mobile-block">
+                                <span data-en="my portfolio website!"
+                                      data-id="website portofolio saya!">my portfolio!</span>
+                            </span>
+                        </small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2"
+                                  data-en="Hey, I'm"
+                                  data-id="Hei, Saya">Hey, I'm</span>
+                            <div class="animated-info">
+                                <span class="animated-item">Putra</span>
+                                <span class="animated-item"
+                                      data-en="Web Developer"
+                                      data-id="Web Developer">Web Developer</span>
+                            </div>
+                        </h1>
+                        <br>
+                        <p data-en="Full-Stack Developer with 3+ years of experience specializing in backend systems, API development, and scalable web architecture. Experienced in building high-performance applications using Golang, Laravel, and CodeIgniter, with strong expertise in database optimization (MySQL & PostgreSQL) and caching using Redis. Proven track record of delivering 25+ projects. Passionate about writing clean, maintainable code and building scalable digital solutions."
+                           data-id="Full-Stack Developer dengan pengalaman 3+ tahun yang berspesialisasi dalam sistem backend, pengembangan API, dan arsitektur web yang skalabel. Berpengalaman membangun aplikasi berperforma tinggi menggunakan Golang, Laravel, dan CodeIgniter, dengan keahlian kuat dalam optimasi database (MySQL & PostgreSQL) dan caching menggunakan Redis. Rekam jejak terbukti dalam menyelesaikan 25+ proyek. Bersemangat menulis kode yang bersih dan mudah dipelihara serta membangun solusi digital yang skalabel.">
+                            Full-Stack Developer with 3+ years of experience specializing in backend systems, API
+                            development, and scalable web architecture. Experienced in building high-performance
+                            applications using Golang, Laravel, and CodeIgniter, with strong expertise in database
+                            optimization (MySQL & PostgreSQL) and caching using Redis. Proven track record of delivering
+                            25+ projects. Passionate about writing clean,
+                            maintainable code and building scalable digital solutions.
+                        </p>
+
+                        <div class="custom-btn-group mt-4">
+                            <button class="btn mr-lg-2 custom-btn"
+                                    onclick="window.open('images/CV-PUTRA-NEW.pdf')">
+                                <i class='uil uil-file-alt'></i>
+                                <span data-en="Download Resume"
+                                      data-id="Unduh Resume">Download Resume</span>
+                            </button>
+                            <a href="#contact"
+                               class="btn custom-btn custom-btn-bg custom-btn-link">
+                                <span data-en="Check My Profile!"
+                                      data-id="Lihat Profil Saya!">Check My Profile!</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="images/profile.jpg"
+                             class="img-fluid"
+                             alt="Putra Profile"
+                             style="border-radius: 15px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHT STATS -->
+    <section class="py-5"
+             style="background:#fff;"
+             id="stats">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 col-6 mb-4">
+                    <div class="highlight-card">
+                        <div class="icon"><i class="uil uil-briefcase-alt"></i></div>
+                        <h4>3+</h4>
+                        <p data-en="Years Experience"
+                           data-id="Tahun Pengalaman">Years Experience</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-4">
+                    <div class="highlight-card">
+                        <div class="icon"><i class="uil uil-check-circle"></i></div>
+                        <h4>25+</h4>
+                        <p data-en="Projects Completed"
+                           data-id="Proyek Selesai">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-4">
+                    <div class="highlight-card">
+                        <div class="icon"><i class="uil uil-building"></i></div>
+                        <h4>4</h4>
+                        <p data-en="Companies Worked"
+                           data-id="Perusahaan Bekerja">Companies Worked</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-4">
+                    <div class="highlight-card">
+                        <div class="icon"><i class="uil uil-graduation-cap"></i></div>
+                        <h4>3.96</h4>
+                        <p data-en="GPA / 4.00"
+                           data-id="IPK / 4.00">GPA / 4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-section"
+             id="skills">
+        <div class="container">
+            <h2 class="mb-2"
+                data-en="Skills &amp; Expertise"
+                data-id="Keahlian &amp; Kompetensi">Skills &amp; Expertise</h2>
+            <p class="mb-5"
+               data-en="Technologies and tools I work with professionally."
+               data-id="Teknologi dan alat yang saya gunakan secara profesional.">Technologies and tools I work with
+                professionally.</p>
+
+            <div class="row">
+                <!-- Skills Tags - full width now -->
+                <div class="col-12 mb-5">
+                    <div class="skill-category">
+                        <div class="skill-category-title"
+                             data-en="Backend"
+                             data-id="Backend">Backend</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><img src="images/tech/laravel.png"
+                                     alt="Laravel"> Laravel</span>
+                            <span class="skill-tag"><img src="images/tech/golang.webp"
+                                     alt="Golang"> Golang</span>
+                            <span class="skill-tag"><img src="images/tech/ci.png"
+                                     alt="CI"> CodeIgniter</span>
+                            <span class="skill-tag"><img src="images/tech/php.png"
+                                     alt="PHP"> PHP</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> REST API</span>
+
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title"
+                             data-en="Frontend"
+                             data-id="Frontend">Frontend</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><img src="images/tech/vue.png"
+                                     alt="Vue"> Vue.js</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> Nuxt.js</span>
+                            <span class="skill-tag"><img src="images/tech/js.png"
+                                     alt="JS"> JavaScript</span>
+                            <span class="skill-tag"><img src="images/tech/jquery.png"
+                                     alt="jQuery"> jQuery</span>
+                            <span class="skill-tag"><img src="images/tech/bootstrap.png"
+                                     alt="Bootstrap"> Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title"
+                             data-en="Database"
+                             data-id="Database">Database</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><img src="images/tech/mysql.png"
+                                     alt="MySQL"> MySQL</span>
+                            <span class="skill-tag"><img src="images/tech/posgresql.png"
+                                     alt="PostgreSQL"> PostgreSQL</span>
+                            <span class="skill-tag"><img src="images/tech/reddis.png"
+                                     alt="Redis"> Redis</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-category-title"
+                             data-en="Tools & Others"
+                             data-id="Alat &amp; Lainnya">Tools &amp; Others</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag"><span class="skill-dot"></span> Git</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> Docker</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> Linux</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> Postman</span>
+                            <span class="skill-tag"><span class="skill-dot"></span> AJAX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center"
+             id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4"
+                        data-en="Experiences"
+                        data-id="Pengalaman Kerja">Experiences</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2025</span></div>
+                            <div class="timeline-info">
+                                <h3><span data-en="Backend Developer"
+                                          data-id="Backend Developer">Backend Developer</span>
+                                    <small>PT Rahadhyan Integrasi Nusantara &amp; PT Rahadhyan International Capital
+                                        Haven</small>
+                                </h3>
+                                <h6>Sep 2025 - Present</h6>
+                                <p data-en="Developed scalable backend systems and RESTful APIs for multiple platforms including Ayomuslim, Ayosiswa, and YourPacker. Built high-performance services using Golang and Laravel, optimized databases (MySQL & PostgreSQL), and implemented Redis caching to improve system performance. Collaborated with cross-functional teams to deliver reliable and scalable digital solutions."
+                                   data-id="Mengembangkan sistem backend yang skalabel dan RESTful API untuk berbagai platform termasuk Ayomuslim, Ayosiswa, dan YourPacker. Membangun layanan berperforma tinggi menggunakan Golang dan Laravel, mengoptimalkan database (MySQL & PostgreSQL), dan mengimplementasikan Redis caching untuk meningkatkan performa sistem. Berkolaborasi dengan tim lintas fungsi untuk menghasilkan solusi digital yang andal dan skalabel.">
+                                    Developed scalable backend systems and RESTful APIs for multiple platforms including
+                                    Ayomuslim, Ayosiswa, and YourPacker. Built high-performance services using Golang
+                                    and Laravel, optimized databases (MySQL &amp; PostgreSQL), and implemented Redis
+                                    caching to improve system performance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2024</span></div>
+                            <div class="timeline-info">
+                                <h5><span data-en="Full Stack Web Developer"
+                                          data-id="Full Stack Web Developer">Full Stack Web Developer</span>
+                                    <small>PT Satustop Finansial Solusi</small>
+                                </h5>
+                                <h6>Mei 2024 - Sep 2025</h6>
+                                <p data-en="Developed and maintained full-stack fintech applications including CMS, P2P lending systems, and dashboards. Built RESTful APIs and asynchronous features using AJAX and jQuery. Implemented dynamic frontend using Vue.js to enhance user experience and performance."
+                                   data-id="Mengembangkan dan memelihara aplikasi fintech full-stack termasuk CMS, sistem P2P lending, dan dashboard. Membangun RESTful API dan fitur asinkron menggunakan AJAX dan jQuery. Mengimplementasikan frontend dinamis menggunakan Vue.js untuk meningkatkan pengalaman dan performa pengguna.">
+                                    Developed and maintained full-stack fintech applications including CMS, P2P lending
+                                    systems, and dashboards. Built RESTful APIs and asynchronous features using AJAX and
+                                    jQuery. Implemented dynamic frontend using Vue.js.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2022</span></div>
+                            <div class="timeline-info">
+                                <h3><span data-en="Full Stack Web Developer"
+                                          data-id="Full Stack Web Developer">Full Stack Web Developer</span>
+                                    <small>PT Buni Pandawa Teknologi</small>
+                                </h3>
+                                <h6>Des 2022 - Feb 2025</h6>
+                                <p data-en="Developed and maintained multiple web applications for clients including Surveyor Indonesia, PTSI, OMDC, and Jabar Quick Response. Handled full development lifecycle: system design, implementation, optimization, and debugging. Integrated APIs and optimized database performance for real-time business processes."
+                                   data-id="Mengembangkan dan memelihara berbagai aplikasi web untuk klien termasuk Surveyor Indonesia, PTSI, OMDC, dan Jabar Quick Response. Menangani siklus pengembangan penuh: desain sistem, implementasi, optimasi, dan debugging. Mengintegrasikan API dan mengoptimalkan performa database untuk proses bisnis real-time.">
+                                    Developed and maintained multiple web applications for clients including Surveyor
+                                    Indonesia, PTSI, OMDC, and Jabar Quick Response. Handled full development lifecycle
+                                    and integrated APIs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>All Time</span></div>
+                            <div class="timeline-info">
+                                <h3><span data-en="Founder &amp; Developer"
+                                          data-id="Pendiri &amp; Developer">Founder &amp; Developer</span>
+                                    <small>Techanius</small>
+                                </h3>
+                                <h6 data-en="All Time"
+                                    data-id="Sepanjang Waktu">All Time</h6>
+                                <p data-en="Founded Techanius as a freelance web development agency. Led 25+ projects from small business sites to large-scale applications, acting as both developer and project manager. Mentored junior developers and delivered scalable, client-focused solutions."
+                                   data-id="Mendirikan Techanius sebagai agen pengembangan web freelance. Memimpin 25+ proyek dari situs bisnis kecil hingga aplikasi skala besar, bertindak sebagai developer sekaligus project manager. Membimbing developer junior dan menghasilkan solusi yang skalabel dan berfokus pada klien.">
+                                    Founded Techanius as a freelance web development agency. Led 25+ projects, acting as
+                                    both developer and project manager. Mentored junior developers and delivered
+                                    scalable, client-focused solutions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2022</span></div>
+                            <div class="timeline-info">
+                                <h3><span data-en="Startup Developer"
+                                          data-id="Startup Developer">Startup Developer</span>
+                                    <small>Ensiklotari, Accome, Edutrack</small>
+                                </h3>
+                                <h6>Jun 2022 - Jun 2023</h6>
+                                <p data-en="Built multiple startup platforms: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), and Edutrack (psychotest platform). Focused on scalable architecture, API integration, and user experience."
+                                   data-id="Membangun berbagai platform startup: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), dan Edutrack (platform psikotes). Berfokus pada arsitektur yang skalabel, integrasi API, dan pengalaman pengguna.">
+                                    Built multiple startup platforms: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), and
+                                    Edutrack. Focused on scalable architecture, API integration, and user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <h2 class="mb-4 mobile-mt-2"
+                        data-en="Educations"
+                        data-id="Pendidikan">Educations</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2018</span></div>
+                            <div class="timeline-info">
+                                <h5><span>Smk Bakti Nusantara 666</span><small data-en="Software Engineering"
+                                           data-id="Rekayasa Perangkat Lunak">Software Engineering</small></h5>
+                                <h6>Mar 2018 - Jun 2021</h6>
+                                <p data-en="Specialized in Software Engineering. Final project: School Fee Payment application using CodeIgniter 3, scored 98. Demonstrated strong understanding of web development and practical software solutions."
+                                   data-id="Spesialisasi Rekayasa Perangkat Lunak. Proyek akhir: Aplikasi Pembayaran SPP menggunakan CodeIgniter 3, mendapat nilai 98. Menunjukkan pemahaman kuat tentang pengembangan web dan solusi perangkat lunak praktis.">
+                                    Specialized in Software Engineering. Final project: School Fee Payment application
+                                    using CodeIgniter 3, scored 98.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr"><span>2021</span></div>
+                            <div class="timeline-info">
+                                <h3><span>Ars University</span><small data-en="Informatics Engineering"
+                                           data-id="Teknik Informatika">Informatics Engineering</small></h3>
+                                <h6>Sep 2021 - Sep 2025</h6>
+                                <p data-en="Bachelor Degree in Informatics Engineering at Ars University, Bandung (2021–2025) with GPA 3.96/4.00. Active in startup competitions and digital innovation programs. Speaker on 'Kerja Sambil Kuliah' podcast."
+                                   data-id="Sarjana Teknik Informatika di Universitas Ars, Bandung (2021–2025) dengan IPK 3.96/4.00. Aktif dalam kompetisi startup dan program inovasi digital. Pembicara di podcast 'Kerja Sambil Kuliah'.">
+                                    Bachelor Degree in Informatics Engineering at Ars University, Bandung (2021–2025)
+                                    with GPA 3.96/4.00. Active in startup competitions and digital innovation programs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="py-5"
+             id="portfolio"
+             style="background:#fff;">
+        <div class="container">
+            <h2 class="mb-2"
+                data-en="Portfolio"
+                data-id="Portofolio">Portfolio</h2>
+            <p class="mb-5"
+               data-en="Some of the projects I've worked on."
+               data-id="Beberapa proyek yang pernah saya kerjakan.">Some of the projects I Freelance.</p>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/1.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/1.png"
+                                 alt="Project 1"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/2.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/2.png"
+                                 alt="Project 2"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/3.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/3.png"
+                                 alt="Project 3"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/4.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/4.png"
+                                 alt="Project 4"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/5.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/5.png"
+                                 alt="Project 5"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/6.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/6.png"
+                                 alt="Project 6"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/6.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/6.png"
+                                 alt="Project 6"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card"
+                         onclick="openLightbox('porto/freelance/7.png')">
+                        <div class="portfolio-img-wrap">
+                            <img src="porto/freelance/7.png"
+                                 alt="Project 6"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <p class="mb-5"
+           data-en="Some of the projects I've worked on."
+           data-id="Beberapa proyek yang pernah saya kerjakan.">Some of the projects I Work On Companies.</p>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="portfolio-card"
+                     onclick="openLightbox('porto/work/1.png')">
+                    <div class="portfolio-img-wrap">
+                        <img src="porto/work/1.png"
+                             alt="Project 1"
+                             class="img-fluid">
+                        <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="portfolio-card"
+                     onclick="openLightbox('porto/work/2.png')">
+                    <div class="portfolio-img-wrap">
+                        <img src="porto/work/2.png"
+                             alt="Project 2"
+                             class="img-fluid">
+                        <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox"
+         onclick="closeLightbox()"
+         style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:99999; align-items:center; justify-content:center; cursor:zoom-out;">
+        <img id="lightbox-img"
+             src=""
+             alt=""
+             style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.5);">
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact py-5"
+             id="contact">
+        <div class="container">
+
+            <h2 class="mb-5 text-center"
+                data-en="Contact"
+                data-id="Kontak">Contact</h2>
+
+            <div class="row justify-content-center mb-5">
+
+                <!-- Info Card -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="contact-card h-100">
+                        <div class="contact-card-icon"><i class="uil uil-user-circle"></i></div>
+                        <h5 data-en="Personal Info"
+                            data-id="Info Pribadi">Personal Info</h5>
+                        <p class="mb-1"><strong>Tri Putra Satriawan</strong></p>
+                        <p class="mb-1"
+                           style="font-size:14px; color:#888;">Bandung, Indonesia</p>
+                        <a href="mailto:tripsatriawan30@gmail.com"
+                           class="contact-link">
+                            <i class="uil uil-envelope"></i> tripsatriawan30@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social Card -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="contact-card h-100">
+                        <div class="contact-card-icon"><i class="uil uil-share-alt"></i></div>
+                        <h5 data-en="Find Me On"
+                            data-id="Temukan Saya Di">Find Me On</h5>
+                        <div class="d-flex justify-content-center mt-3"
+                             style="gap:20px;">
+                            <a href="https://github.com/putrasatriawan"
+                               target="_blank"
+                               class="social-card-link">
+                                <img src="images/icon/github.png"
+                                     alt="GitHub"
+                                     width="48">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tri-putra-satriawan-462b33210"
+                               target="_blank"
+                               class="social-card-link">
+                                <img src="images/icon/linkedin.png"
+                                     alt="LinkedIn"
+                                     width="48">
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center"
+                       data-en="Made With Love By Putra"
+                       data-id="Dibuat Dengan Cinta Oleh Putra">Made With Love By Putra</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+        // ── Lightbox ─────────────────────────────────────────────
+        function openLightbox(src) {
+            var lb = document.getElementById('lightbox');
+            document.getElementById('lightbox-img').src = src;
+            lb.style.display = 'flex';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ── Language Toggle ──────────────────────────────────────────
+        var currentLang = 'en';
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-id').classList.toggle('active', lang === 'id');
+
+            document.querySelectorAll('[data-en]').forEach(function (el) {
+                var val = el.getAttribute('data-' + lang);
+                if (val) el.innerHTML = val;
+            });
+
+            // Update nav data-hover attributes
+            document.querySelectorAll('.nav-link span[data-hover]').forEach(function (el) {
+                var id = el.getAttribute('data-hover-id');
+                var map = {
+                    'nav-about': { en: 'About', id: 'Tentang' },
+                    'nav-skills': { en: 'Skills', id: 'Keahlian' },
+                    'nav-portfolio': { en: 'Portfolio', id: 'Portofolio' },
+                    'nav-resume': { en: 'Resume', id: 'Riwayat' },
+                    'nav-contact': { en: 'Contact', id: 'Kontak' }
+                };
+                if (id && map[id]) {
+                    el.setAttribute('data-hover', map[id][lang]);
+                    el.textContent = map[id][lang];
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

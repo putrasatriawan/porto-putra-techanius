@@ -142,14 +142,14 @@
 
         /* Highlight cards */
         .highlight-card {
-            background: #fff;
+            background: #1a1a1a;
             border-radius: 16px;
             padding: 28px 24px;
             text-align: center;
-            border: 2px solid #f0f0f0;
+            border: 2px solid #333;
             transition: all 0.3s;
             height: 100%;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
         }
 
         .highlight-card:hover {
@@ -166,23 +166,14 @@
 
         .highlight-card h4 {
             font-size: 2em;
-            color: #474559;
+            color: #fff;
             margin-bottom: 4px;
         }
 
         .highlight-card p {
             font-size: 14px;
-            color: #888;
+            color: #aaa;
             margin: 0;
-        }
-
-        .dark-mode .highlight-card {
-            background: #1a1a1a;
-            border-color: #333;
-        }
-
-        .dark-mode .highlight-card h4 {
-            color: #fff;
         }
 
         /* Contact section */
@@ -202,7 +193,469 @@
             font-weight: bold;
         }
 
-        /* Portfolio Cards */
+        /* Company Experience Card */
+        .company-experience-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #ffc200;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(255, 194, 0, 0.15);
+            transition: all 0.3s;
+        }
+
+        .company-experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.25);
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #333;
+        }
+
+        .experience-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffc200;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .experience-icon i {
+            font-size: 32px;
+            color: #000;
+        }
+
+        .experience-header h5 {
+            color: #ffc200;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .experience-header p {
+            color: #aaa;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .experience-content {
+            margin-bottom: 24px;
+        }
+
+        .experience-company {
+            margin-bottom: 24px;
+        }
+
+        .experience-company:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-company h6 {
+            color: #ffc200;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-list li {
+            color: #ccc;
+            font-size: 14px;
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .experience-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #ffc200;
+            font-weight: bold;
+        }
+
+        .experience-footer {
+            padding-top: 20px;
+            border-top: 2px solid #333;
+        }
+
+        .experience-badge {
+            display: inline-block;
+            background: #ffc200;
+            color: #000;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 991px) {
+            .company-experience-card {
+                padding: 24px;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+
+            .experience-icon {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        /* Techanius Info Card */
+        .techanius-info-card {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #ffc200;
+            border-radius: 16px;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(255, 194, 0, 0.15);
+            transition: all 0.3s;
+        }
+
+        .techanius-info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.25);
+        }
+
+        .techanius-card-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffc200;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .techanius-card-icon i {
+            font-size: 32px;
+            color: #000;
+        }
+
+        .techanius-info-card h5 {
+            color: #ffc200;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 16px;
+        }
+
+        .techanius-info-card p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .techanius-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            flex: 1;
+        }
+
+        .techanius-list li {
+            color: #ccc;
+            font-size: 14px;
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .techanius-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffc200;
+            font-weight: bold;
+        }
+
+        .techanius-card-footer {
+            margin-top: auto;
+            padding-top: 16px;
+            border-top: 1px solid #333;
+        }
+
+        .techanius-badge {
+            display: inline-block;
+            background: #ffc200;
+            color: #000;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Techanius Banner */
+        .techanius-banner {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+            border: 2px solid #ffc200;
+            border-radius: 16px;
+            padding: 28px 32px;
+            box-shadow: 0 8px 32px rgba(255, 194, 0, 0.15);
+        }
+
+        .techanius-icon {
+            width: 60px;
+            height: 60px;
+            background: #ffc200;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .techanius-icon i {
+            font-size: 32px;
+            color: #000;
+        }
+
+        .techanius-banner h5 {
+            color: #ffc200;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .techanius-banner p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .techanius-stats {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffc200;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 991px) {
+            .techanius-banner {
+                padding: 24px 20px;
+            }
+
+            .techanius-icon {
+                width: 50px;
+                height: 50px;
+                margin-right: 16px;
+            }
+
+            .techanius-icon i {
+                font-size: 26px;
+            }
+
+            .techanius-stats {
+                gap: 16px;
+                margin-top: 16px;
+            }
+
+            .stat-number {
+                font-size: 1.6em;
+            }
+        }
+
+        /* Portfolio Cards V2 - Dark Theme */
+        .portfolio-section-header {
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #333;
+        }
+
+        .portfolio-section-header h4 {
+            color: #ffc200;
+            font-size: 1.5em;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .portfolio-section-header p {
+            color: #888;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .portfolio-card-v2 {
+            background: #252525;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid #333;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card-v2:hover {
+            border-color: #ffc200;
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.2);
+        }
+
+        .portfolio-card-featured {
+            border-color: #ffc200;
+            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
+        }
+
+        .portfolio-card-featured:hover {
+            box-shadow: 0 16px 48px rgba(255, 194, 0, 0.3);
+        }
+
+        .portfolio-img-wrap-v2 {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .portfolio-img-wrap-v2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card-v2:hover .portfolio-img-wrap-v2 img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-overlay-v2 {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-overlay-v2 i {
+            font-size: 48px;
+            color: #ffc200;
+        }
+
+        .portfolio-card-v2:hover .portfolio-overlay-v2 {
+            opacity: 1;
+        }
+
+        .portfolio-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-content h5 {
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-content p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .portfolio-badge {
+            display: inline-block;
+            background: #ffc200;
+            color: #000;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-role-badge {
+            display: inline-block;
+            background: rgba(255, 194, 0, 0.2);
+            color: #ffc200;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            border: 1px solid #ffc200;
+            margin-left: 8px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .portfolio-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .portfolio-tech span {
+            background: #1a1a1a;
+            color: #ffc200;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 1px solid #333;
+            transition: all 0.3s;
+        }
+
+        .portfolio-card-v2:hover .portfolio-tech span {
+            border-color: #ffc200;
+            background: #2a2a2a;
+        }
+
+        /* Old Portfolio Cards - keep for compatibility */
         .portfolio-card {
             border-radius: 12px;
             overflow: hidden;
@@ -375,7 +828,7 @@
     </style>
 </head>
 
-<body>
+<body class="dark-mode">
 
     <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
@@ -514,7 +967,7 @@
 
     <!-- HIGHLIGHT STATS -->
     <section class="py-5"
-             style="background:#fff;"
+             style="background:#0c0c0d;"
              id="stats">
         <div class="container">
             <div class="row text-center">
@@ -769,137 +1222,367 @@
     <!-- PORTFOLIO -->
     <section class="py-5"
              id="portfolio"
-             style="background:#fff;">
+             style="background:#1a1a1a;">
         <div class="container">
-            <h2 class="mb-2"
+            <h2 class="mb-2 text-white"
                 data-en="Portfolio"
                 data-id="Portofolio">Portfolio</h2>
             <p class="mb-5"
-               data-en="Some of the projects I've worked on."
-               data-id="Beberapa proyek yang pernah saya kerjakan.">Some of the projects I Freelance.</p>
+               style="color:#aaa;"
+               data-en="Showcasing my work across freelance projects and company collaborations."
+               data-id="Menampilkan karya saya di berbagai proyek freelance dan kolaborasi perusahaan.">Showcasing my
+                work across freelance projects and company collaborations.</p>
+
+            <!-- Freelance Projects -->
+            <div class="portfolio-section-header">
+                <h4 data-en="Freelance Projects"
+                    data-id="Proyek Freelance">Freelance Projects</h4>
+                <p data-en="Custom solutions built for diverse clients through Techanius"
+                   data-id="Solusi custom yang dibangun untuk berbagai klien melalui Techanius">Custom solutions built
+                    for diverse clients through Techanius</p>
+            </div>
+
+            <!-- Techanius Stats Banner -->
 
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/1.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/1.png"
-                                 alt="Project 1"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/2.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/2.png"
-                                 alt="Project 2"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/3.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/3.png"
-                                 alt="Project 3"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/4.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/4.png"
-                                 alt="Project 4"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/5.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/5.png"
-                                 alt="Project 5"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/6.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/6.png"
-                                 alt="Project 6"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
-                         onclick="openLightbox('porto/freelance/6.png')">
-                        <div class="portfolio-img-wrap">
-                            <img src="porto/freelance/6.png"
-                                 alt="Project 6"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card"
+                    <div class="portfolio-card-v2"
                          onclick="openLightbox('porto/freelance/7.png')">
-                        <div class="portfolio-img-wrap">
+                        <div class="portfolio-img-wrap-v2">
                             <img src="porto/freelance/7.png"
-                                 alt="Project 6"
+                                 alt="Xorix Outdoor"
                                  class="img-fluid">
-                            <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-role-badge"
+                                  data-en="Backend Developer"
+                                  data-id="Backend Developer">Backend Developer</span>
+                            <h5 data-en="Xorix Outdoor"
+                                data-id="Xorix Outdoor">Xorix Outdoor</h5>
+                            <p data-en="Full-featured e-commerce website with complete payment gateway integration and shipping management system"
+                               data-id="Website e-commerce lengkap dengan integrasi payment gateway dan sistem manajemen pengiriman">
+                                Full-featured e-commerce website with complete payment gateway integration and shipping
+                                management system</p>
+                            <div class="portfolio-tech">
+                                <span>Laravel</span>
+                                <span>Vue.js</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2"
+                         onclick="openLightbox('porto/freelance/1.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/freelance/1.png"
+                                 alt="Geolocation Attendance System"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-role-badge"
+                                  data-en="Full Stack Developer"
+                                  data-id="Full Stack Developer">Full Stack Developer</span>
+                            <h5 data-en="Geolocation Attendance & Payroll System"
+                                data-id="Sistem Absensi Geolokasi & Penggajian">Geolocation Attendance & Payroll System
+                            </h5>
+                            <p data-en="Geolocation-based attendance and payroll management system for SMA YPKKP Bandung"
+                               data-id="Sistem absensi berbasis geolokasi dan manajemen penggajian untuk SMA YPKKP Bandung">
+                                Geolocation-based attendance and payroll management system for SMA YPKKP Bandung</p>
+                            <div class="portfolio-tech">
+                                <span>Codeigniter</span>
+                                <span>MySQL</span>
+                                <span>Geolocation API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2"
+                         onclick="openLightbox('porto/freelance/3.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/freelance/3.png"
+                                 alt="Wedding Invitation Platform"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-role-badge"
+                                  data-en="Full Stack Developer"
+                                  data-id="Full Stack Developer">Full Stack Developer</span>
+                            <h5 data-en="Wedding Invitation Platform"
+                                data-id="Platform Undangan Pernikahan">Wedding Invitation Platform</h5>
+                            <p data-en="Online wedding invitation platform with multiple customizable templates for modern couples"
+                               data-id="Platform undangan pernikahan online dengan berbagai template yang dapat disesuaikan untuk pasangan modern">
+                                Online wedding invitation platform with multiple customizable templates for modern
+                                couples</p>
+                            <div class="portfolio-tech">
+                                <span>Html</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2"
+                         onclick="openLightbox('porto/freelance/5.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/freelance/5.png"
+                                 alt="Baknus School Payment System"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-role-badge"
+                                  data-en="Full Stack Developer"
+                                  data-id="Full Stack Developer">Full Stack Developer</span>
+                            <h5 data-en="Baknus School Payment System"
+                                data-id="Sistem Pembayaran Sekolah Baknus">Baknus School Payment System</h5>
+                            <p data-en="School payment management system built for SMK research needs, featuring tuition fee payment and financial reporting"
+                               data-id="Sistem manajemen pembayaran sekolah yang dibangun untuk kebutuhan penelitian SMK, dengan fitur pembayaran SPP dan pelaporan keuangan">
+                                School payment management system built for SMK research needs, featuring tuition fee
+                                payment and financial reporting</p>
+                            <div class="portfolio-tech">
+                                <span>CodeIgniter</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2"
+                         onclick="openLightbox('porto/freelance/6.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/freelance/6.png"
+                                 alt="Edutrack"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-role-badge"
+                                  data-en="Full Stack Developer"
+                                  data-id="Full Stack Developer">Full Stack Developer</span>
+                            <h5 data-en="Edutrack - Educational Assessment Platform"
+                                data-id="Edutrack - Platform Penilaian Pendidikan">Edutrack - Educational Assessment
+                                Platform</h5>
+                            <p data-en="Startup platform for educational assessment competition. Users complete questionnaires to receive personalized educational path recommendations"
+                               data-id="Platform startup untuk kompetisi penilaian pendidikan. Pengguna mengisi kuesioner untuk menerima rekomendasi jalur pendidikan yang dipersonalisasi">
+                                Startup platform for educational assessment competition. Users complete questionnaires
+                                to receive personalized educational path recommendations</p>
+                            <div class="portfolio-tech">
+                                <span>Codeigniter</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Techanius Info Card -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="techanius-info-card h-100">
+                        <div class="techanius-card-icon">
+                            <i class="uil uil-rocket"></i>
+                        </div>
+                        <h5 data-en="30+ More Projects"
+                            data-id="30+ Proyek Lainnya">30+ More Projects</h5>
+                        <p data-en="At Techanius, I've successfully delivered 30+ coding solutions, including:"
+                           data-id="Di Techanius, Saya telah berhasil menyelesaikan 30+ solusi coding, termasuk:">
+                            At Techanius, I've successfully delivered 30+ coding solutions, including:</p>
+                        <ul class="techanius-list">
+                            <li data-en="Helping students complete their thesis coding projects"
+                                data-id="Membantu Mahasiswa & Siswa Menyelesaikan Skripsi Codingan nya">Helping students
+                                complete their thesis coding projects</li>
+                            <li data-en="Assisting students with coding assignments to achieve top grades"
+                                data-id="Membantu Mahasiswa & Siswa Menyelesaikan Tugas Coding Dengan Nilai Terbaik">
+                                Assisting students with coding assignments to achieve top grades</li>
+                            <li data-en="Building custom web applications for businesses"
+                                data-id="Membangun aplikasi web custom untuk bisnis">Building custom web applications
+                                for businesses</li>
+                            <li data-en="Developing e-commerce and management systems"
+                                data-id="Mengembangkan sistem e-commerce dan manajemen">Developing e-commerce and
+                                management systems</li>
+                        </ul>
+                        <div class="techanius-card-footer">
+                            <span class="techanius-badge"
+                                  data-en="Founder & Lead Developer"
+                                  data-id="Pendiri & Lead Developer">Founder & Lead Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Projects -->
+            <div class="portfolio-section-header mt-5">
+                <h4 data-en="Company Projects"
+                    data-id="Proyek Perusahaan">Company Projects</h4>
+                <p data-en="Enterprise solutions developed during professional engagements"
+                   data-id="Solusi enterprise yang dikembangkan selama keterlibatan profesional">Enterprise solutions
+                    developed during professional engagements</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2 portfolio-card-featured"
+                         onclick="openLightbox('porto/work/1.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/work/1.png"
+                                 alt="Ayo Siswa"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-badge"
+                                  data-en="Featured"
+                                  data-id="Unggulan">Featured</span>
+                            <span class="portfolio-role-badge"
+                                  data-en="Backend Developer"
+                                  data-id="Backend Developer">Backend Developer</span>
+                            <h5 data-en="Ayo Siswa - Complete School Management Platform"
+                                data-id="Ayo Siswa - Platform Manajemen Sekolah Lengkap">Ayo Siswa - Complete School
+                                Management Platform</h5>
+                            <p data-en="Full-featured application for comprehensive school needs including student management, attendance tracking, grading system, and parent-teacher communication portal. Built for PT Rahadhyan."
+                               data-id="Aplikasi lengkap untuk kebutuhan sekolah komprehensif termasuk manajemen siswa, pelacakan kehadiran, sistem penilaian, dan portal komunikasi orang tua-guru. Dibangun untuk PT Rahadhyan.">
+                                Full-featured application for comprehensive school needs including student management,
+                                attendance tracking, grading system, and parent-teacher communication portal. Built for
+                                PT Rahadhyan.</p>
+                            <div class="portfolio-tech">
+                                <span>Laravel</span>
+                                <span>Mysql</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="portfolio-card-v2 portfolio-card-featured"
+                         onclick="openLightbox('porto/work/2.png')">
+                        <div class="portfolio-img-wrap-v2">
+                            <img src="porto/work/2.png"
+                                 alt="Ayo Muslim"
+                                 class="img-fluid">
+                            <div class="portfolio-overlay-v2">
+                                <i class="uil uil-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-badge"
+                                  data-en="Featured"
+                                  data-id="Unggulan">Featured</span>
+                            <span class="portfolio-role-badge"
+                                  data-en="Backend Developer"
+                                  data-id="Backend Developer">Backend Developer</span>
+                            <h5 data-en="Ayo Muslim - Islamic Companion App"
+                                data-id="Ayo Muslim - Aplikasi Pendamping Islami">Ayo Muslim - Islamic Companion App
+                            </h5>
+                            <p data-en="Comprehensive Islamic application featuring Quran reading, Hadith collections, religious consultation, dhikr counter, and prayer guides. High-performance backend with optimized content delivery. Built for PT Rahadhyan."
+                               data-id="Aplikasi Islami komprehensif dengan fitur baca Quran, koleksi Hadist, konsultasi agama, penghitung dzikir, dan panduan sholat. Backend berperforma tinggi dengan pengiriman konten yang dioptimalkan. Dibangun untuk PT Rahadhyan.">
+                                Comprehensive Islamic application featuring Quran reading, Hadith collections, religious
+                                consultation, dhikr counter, and prayer guides. High-performance backend with optimized
+                                content delivery. Built for PT Rahadhyan.</p>
+                            <div class="portfolio-tech">
+                                <span>Nest</span>
+                                <span>Laravel</span>
+                                <span>Redis</span>
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Experience Info Card -->
+                <div class="col-12 mb-4">
+                    <div class="company-experience-card">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="uil uil-building"></i>
+                            </div>
+                            <div>
+                                <h5 data-en="Company Projects"
+                                    data-id="Proyek Perusahaan">Company Projects</h5>
+                                <p data-en="Beyond the featured projects, I've contributed to multiple enterprise solutions:"
+                                   data-id="Selain proyek unggulan, saya telah berkontribusi pada berbagai solusi enterprise:">
+                                    Beyond the featured projects, I've contributed to multiple enterprise solutions:</p>
+                            </div>
+                        </div>
+
+                        <div class="experience-content">
+                            <div class="experience-company">
+                                <h6 data-en="PT Satustop Finansial Solusi"
+                                    data-id="PT Satustop Finansial Solusi">PT Satustop Finansial Solusi</h6>
+                                <ul class="experience-list">
+                                    <li data-en="P2P Lending Platform - Frontend (CodeIgniter, Bootstrap, MySQL)"
+                                        data-id="Platform P2P Lending - Frontend (CodeIgniter, Bootstrap, MySQL)">P2P
+                                        Lending Platform - Frontend (CodeIgniter, Bootstrap, MySQL)</li>
+                                    <li data-en="CMS System (CodeIgniter, Bootstrap, MySQL)"
+                                        data-id="Sistem CMS (CodeIgniter, Bootstrap, MySQL)">CMS System (CodeIgniter,
+                                        Bootstrap, MySQL)</li>
+                                    <li data-en="API Backend (CodeIgniter, MySQL)"
+                                        data-id="API Backend (CodeIgniter, MySQL)">API Backend (CodeIgniter, MySQL)</li>
+                                    <li data-en="Landing Page (Vue.js, Vuetify)"
+                                        data-id="Landing Page (Vue.js, Vuetify)">Landing Page (Vue.js, Vuetify)</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-company">
+                                <h6 data-en="PT Buni Pandawa Teknologi"
+                                    data-id="PT Buni Pandawa Teknologi">PT Buni Pandawa Teknologi</h6>
+                                <ul class="experience-list">
+                                    <li data-en="SIMDU - PT Surveyor Indonesia (CodeIgniter)"
+                                        data-id="SIMDU - PT Surveyor Indonesia (CodeIgniter)">SIMDU - PT Surveyor
+                                        Indonesia (CodeIgniter)</li>
+                                    <li data-en="KPU Jabar System (CodeIgniter)"
+                                        data-id="Sistem KPU Jabar (CodeIgniter)">KPU Jabar System (CodeIgniter)</li>
+                                    <li data-en="JQR HRIS - Human Resource Management (CodeIgniter)"
+                                        data-id="JQR HRIS - Manajemen Sumber Daya Manusia (CodeIgniter)">JQR HRIS -
+                                        Human Resource Management (CodeIgniter)</li>
+                                    <li data-en="JQR Disaster Mapping System (CodeIgniter)"
+                                        data-id="Sistem Pemetaan Bencana JQR (CodeIgniter)">JQR Disaster Mapping System
+                                        (CodeIgniter)</li>
+                                    <li data-en="JQR Complaint & Recommendation System (CodeIgniter)"
+                                        data-id="Sistem Aduan & Rekomendasi JQR (CodeIgniter)">JQR Complaint &
+                                        Recommendation System (CodeIgniter)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience-footer">
+                            <span class="experience-badge"
+                                  data-en="Full Stack Developer"
+                                  data-id="Full Stack Developer">Full Stack Developer</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <div class="container">
-        <p class="mb-5"
-           data-en="Some of the projects I've worked on."
-           data-id="Beberapa proyek yang pernah saya kerjakan.">Some of the projects I Work On Companies.</p>
-
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 mb-4">
-                <div class="portfolio-card"
-                     onclick="openLightbox('porto/work/1.png')">
-                    <div class="portfolio-img-wrap">
-                        <img src="porto/work/1.png"
-                             alt="Project 1"
-                             class="img-fluid">
-                        <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 mb-4">
-                <div class="portfolio-card"
-                     onclick="openLightbox('porto/work/2.png')">
-                    <div class="portfolio-img-wrap">
-                        <img src="porto/work/2.png"
-                             alt="Project 2"
-                             class="img-fluid">
-                        <div class="portfolio-overlay"><i class="uil uil-search-plus"></i></div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+        </div>
+        </div>
+
+
+        </div>
+        </div>
     </section>
 
     <!-- LIGHTBOX -->

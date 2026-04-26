@@ -60,6 +60,58 @@
             color: #fff;
         }
 
+        /* Dark Mode Text Colors */
+        .dark-mode {
+            background: #0c0c0d;
+            color: #e0e0e0;
+        }
+
+        .dark-mode p {
+            color: #d0d0d0;
+        }
+
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode h3,
+        .dark-mode h4,
+        .dark-mode h5,
+        .dark-mode h6 {
+            color: #ffffff;
+        }
+
+        .dark-mode .navbar-light .navbar-brand {
+            color: #ffffff;
+        }
+
+        .dark-mode .small-text {
+            color: #e0e0e0;
+        }
+
+        .dark-mode .about-text p {
+            color: #d0d0d0;
+        }
+
+        .dark-mode .timeline-info p {
+            color: #c0c0c0;
+        }
+
+        .dark-mode .portfolio-content p {
+            color: #b0b0b0;
+        }
+
+        /* Navbar Collapse Dark Mode */
+        .dark-mode .navbar-collapse {
+            background: #0c0c0d !important;
+        }
+
+        .dark-mode .navbar-collapse .nav-link {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-mode .navbar-collapse .nav-link:hover {
+            color: #ffc200 !important;
+        }
+
         /* Skills Section */
         .skills-section {
             padding: 60px 0;
@@ -883,10 +935,10 @@
                          style="gap:16px; display:flex!important;">
                         <!-- Language Toggle -->
                         <div class="lang-toggle mr-3">
-                            <button class="lang-btn active"
+                            <button class="lang-btn"
                                     id="btn-en"
                                     onclick="setLang('en')">EN</button>
-                            <button class="lang-btn"
+                            <button class="lang-btn active"
                                     id="btn-id"
                                     onclick="setLang('id')">ID</button>
                         </div>
@@ -1694,7 +1746,7 @@
         });
 
         // ── Language Toggle ──────────────────────────────────────────
-        var currentLang = 'en';
+        var currentLang = 'id';
 
         function setLang(lang) {
             currentLang = lang;
@@ -1722,6 +1774,11 @@
                 }
             });
         }
+
+        // Set default language to Indonesian on page load
+        window.addEventListener('load', function () {
+            setLang('id');
+        });
 
     </script>
 </body>

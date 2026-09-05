@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
-          source: "*.html,*.css,*.js,assets/*"
+          source: "."
           target: "/tmp/deploy"
           overwrite: true
 
@@ -30,7 +30,8 @@ jobs:
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            sudo cp -r /tmp/deploy/* /var/www/html/
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /tmp/deploy/./* /var/www/html/
             sudo chown -R www-data:www-data /var/www/html/
             sudo systemctl reload nginx
             rm -rf /tmp/deploy

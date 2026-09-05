@@ -1,1058 +1,277 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description"
-          content="">
-    <meta name="author"
-          content="">
-    <title>Porto Putra</title>
-    <link rel="stylesheet"
-          href="css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="css/unicons.css">
-    <link rel="stylesheet"
-          href="css/owl.carousel.min.css">
-    <link rel="stylesheet"
-          href="css/owl.theme.default.min.css">
-    <link rel="stylesheet"
-          href="css/tooplate-style.css">
-    <style>
-        /* Language Toggle */
-        .lang-toggle {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
-            user-select: none;
-        }
-
-        .lang-btn {
-            padding: 4px 12px;
-            border-radius: 50px;
-            border: 2px solid #474559;
-            background: transparent;
-            font-weight: bold;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.3s;
-            color: #474559;
-        }
-
-        .lang-btn.active {
-            background: #474559;
-            color: #fff;
-        }
-
-        .dark-mode .lang-btn {
-            border-color: #fff;
-            color: #fff;
-        }
-
-        .dark-mode .lang-btn.active {
-            background: #ffc200;
-            border-color: #ffc200;
-            color: #fff;
-        }
-
-        /* Dark Mode Text Colors */
-        .dark-mode {
-            background: #0c0c0d;
-            color: #e0e0e0;
-        }
-
-        .dark-mode p {
-            color: #d0d0d0;
-        }
-
-        .dark-mode h1,
-        .dark-mode h2,
-        .dark-mode h3,
-        .dark-mode h4,
-        .dark-mode h5,
-        .dark-mode h6 {
-            color: #ffffff;
-        }
-
-        .dark-mode .navbar-light .navbar-brand {
-            color: #ffffff;
-        }
-
-        .dark-mode .small-text {
-            color: #e0e0e0;
-        }
-
-        .dark-mode .about-text p {
-            color: #d0d0d0;
-        }
-
-        .dark-mode .timeline-info p {
-            color: #c0c0c0;
-        }
-
-        .dark-mode .portfolio-content p {
-            color: #b0b0b0;
-        }
-
-        /* Navbar Collapse Dark Mode */
-        .dark-mode .navbar-collapse {
-            background: #0c0c0d !important;
-        }
-
-        .dark-mode .navbar-collapse .nav-link {
-            color: #e0e0e0 !important;
-        }
-
-        .dark-mode .navbar-collapse .nav-link:hover {
-            color: #ffc200 !important;
-        }
-
-        /* Skills Section */
-        .skills-section {
-            padding: 60px 0;
-            background: #f9f9f9;
-        }
-
-        .dark-mode .skills-section {
-            background: #111;
-        }
-
-        .skills-section h2 {
-            margin-bottom: 40px;
-        }
-
-        .skill-category {
-            margin-bottom: 36px;
-        }
-
-        .skill-category-title {
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ffc200;
-            margin-bottom: 14px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            background: #fff;
-            color: #474559;
-            border: 2px solid #e0e0e0;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .skill-tag:hover {
-            border-color: #ffc200;
-            color: #ffc200;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255, 194, 0, 0.15);
-        }
-
-        .skill-tag img {
-            width: 22px;
-            height: 22px;
-            object-fit: contain;
-        }
-
-        .skill-tag .skill-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #ffc200;
-            flex-shrink: 0;
-        }
-
-        .dark-mode .skill-tag {
-            background: #1a1a1a;
-            color: #ccc;
-            border-color: #333;
-        }
-
-        .dark-mode .skill-tag:hover {
-            border-color: #ffc200;
-            color: #ffc200;
-        }
-
-        /* Highlight cards */
-        .highlight-card {
-            background: #1a1a1a;
-            border-radius: 16px;
-            padding: 28px 24px;
-            text-align: center;
-            border: 2px solid #333;
-            transition: all 0.3s;
-            height: 100%;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .highlight-card:hover {
-            border-color: #ffc200;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.12);
-        }
-
-        .highlight-card .icon {
-            font-size: 36px;
-            color: #ffc200;
-            margin-bottom: 12px;
-        }
-
-        .highlight-card h4 {
-            font-size: 2em;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .highlight-card p {
-            font-size: 14px;
-            color: #aaa;
-            margin: 0;
-        }
-
-        /* Contact section */
-        .contact-info {
-            background: linear-gradient(135deg, #474559 0%, #2d2b3d 100%);
-        }
-
-        .contact-info ul li {
-            color: #f0f0f0;
-            font-size: 16px;
-            padding: 4px 0;
-        }
-
-        .contact-info ul li::before {
-            content: "✓ ";
-            color: #ffc200;
-            font-weight: bold;
-        }
-
-        /* Company Experience Card */
-        .company-experience-card {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
-            border: 2px solid #ffc200;
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 4px 20px rgba(255, 194, 0, 0.15);
-            transition: all 0.3s;
-        }
-
-        .company-experience-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.25);
-        }
-
-        .experience-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #333;
-        }
-
-        .experience-icon {
-            width: 60px;
-            height: 60px;
-            background: #ffc200;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .experience-icon i {
-            font-size: 32px;
-            color: #000;
-        }
-
-        .experience-header h5 {
-            color: #ffc200;
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 8px;
-        }
-
-        .experience-header p {
-            color: #aaa;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .experience-content {
-            margin-bottom: 24px;
-        }
-
-        .experience-company {
-            margin-bottom: 24px;
-        }
-
-        .experience-company:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-company h6 {
-            color: #ffc200;
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .experience-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .experience-list li {
-            color: #ccc;
-            font-size: 14px;
-            padding: 8px 0;
-            padding-left: 24px;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .experience-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #ffc200;
-            font-weight: bold;
-        }
-
-        .experience-footer {
-            padding-top: 20px;
-            border-top: 2px solid #333;
-        }
-
-        .experience-badge {
-            display: inline-block;
-            background: #ffc200;
-            color: #000;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 6px 14px;
-            border-radius: 50px;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 991px) {
-            .company-experience-card {
-                padding: 24px;
-            }
-
-            .experience-header {
-                flex-direction: column;
-            }
-
-            .experience-icon {
-                margin-right: 0;
-                margin-bottom: 16px;
-            }
-        }
-
-        /* Techanius Info Card */
-        .techanius-info-card {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
-            border: 2px solid #ffc200;
-            border-radius: 16px;
-            padding: 32px 24px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 20px rgba(255, 194, 0, 0.15);
-            transition: all 0.3s;
-        }
-
-        .techanius-info-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.25);
-        }
-
-        .techanius-card-icon {
-            width: 60px;
-            height: 60px;
-            background: #ffc200;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .techanius-card-icon i {
-            font-size: 32px;
-            color: #000;
-        }
-
-        .techanius-info-card h5 {
-            color: #ffc200;
-            font-weight: bold;
-            font-size: 1.3em;
-            margin-bottom: 16px;
-        }
-
-        .techanius-info-card p {
-            color: #aaa;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .techanius-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-            flex: 1;
-        }
-
-        .techanius-list li {
-            color: #ccc;
-            font-size: 14px;
-            padding: 8px 0;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .techanius-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #ffc200;
-            font-weight: bold;
-        }
-
-        .techanius-card-footer {
-            margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid #333;
-        }
-
-        .techanius-badge {
-            display: inline-block;
-            background: #ffc200;
-            color: #000;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 6px 14px;
-            border-radius: 50px;
-            letter-spacing: 0.5px;
-        }
-
-        /* Techanius Banner */
-        .techanius-banner {
-            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
-            border: 2px solid #ffc200;
-            border-radius: 16px;
-            padding: 28px 32px;
-            box-shadow: 0 8px 32px rgba(255, 194, 0, 0.15);
-        }
-
-        .techanius-icon {
-            width: 60px;
-            height: 60px;
-            background: #ffc200;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .techanius-icon i {
-            font-size: 32px;
-            color: #000;
-        }
-
-        .techanius-banner h5 {
-            color: #ffc200;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .techanius-banner p {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        .techanius-stats {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: bold;
-            color: #ffc200;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 991px) {
-            .techanius-banner {
-                padding: 24px 20px;
-            }
-
-            .techanius-icon {
-                width: 50px;
-                height: 50px;
-                margin-right: 16px;
-            }
-
-            .techanius-icon i {
-                font-size: 26px;
-            }
-
-            .techanius-stats {
-                gap: 16px;
-                margin-top: 16px;
-            }
-
-            .stat-number {
-                font-size: 1.6em;
-            }
-        }
-
-        /* Portfolio Cards V2 - Dark Theme */
-        .portfolio-section-header {
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 2px solid #333;
-        }
-
-        .portfolio-section-header h4 {
-            color: #ffc200;
-            font-size: 1.5em;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .portfolio-section-header p {
-            color: #888;
-            font-size: 15px;
-            margin: 0;
-        }
-
-        .portfolio-card-v2 {
-            background: #252525;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid #333;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-card-v2:hover {
-            border-color: #ffc200;
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(255, 194, 0, 0.2);
-        }
-
-        .portfolio-card-featured {
-            border-color: #ffc200;
-            background: linear-gradient(135deg, #2a2a2a 0%, #1f1f1f 100%);
-        }
-
-        .portfolio-card-featured:hover {
-            box-shadow: 0 16px 48px rgba(255, 194, 0, 0.3);
-        }
-
-        .portfolio-img-wrap-v2 {
-            position: relative;
-            overflow: hidden;
-            height: 200px;
-        }
-
-        .portfolio-img-wrap-v2 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .portfolio-card-v2:hover .portfolio-img-wrap-v2 img {
-            transform: scale(1.1);
-        }
-
-        .portfolio-overlay-v2 {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .portfolio-overlay-v2 i {
-            font-size: 48px;
-            color: #ffc200;
-        }
-
-        .portfolio-card-v2:hover .portfolio-overlay-v2 {
-            opacity: 1;
-        }
-
-        .portfolio-content {
-            padding: 24px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-content h5 {
-            color: #fff;
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .portfolio-content p {
-            color: #aaa;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 16px;
-            flex: 1;
-        }
-
-        .portfolio-badge {
-            display: inline-block;
-            background: #ffc200;
-            color: #000;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 4px 12px;
-            border-radius: 50px;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .portfolio-role-badge {
-            display: inline-block;
-            background: rgba(255, 194, 0, 0.2);
-            color: #ffc200;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 4px 12px;
-            border-radius: 50px;
-            border: 1px solid #ffc200;
-            margin-left: 8px;
-            margin-bottom: 12px;
-            letter-spacing: 0.5px;
-        }
-
-        .portfolio-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .portfolio-tech span {
-            background: #1a1a1a;
-            color: #ffc200;
-            font-size: 12px;
-            font-weight: bold;
-            padding: 6px 14px;
-            border-radius: 50px;
-            border: 1px solid #333;
-            transition: all 0.3s;
-        }
-
-        .portfolio-card-v2:hover .portfolio-tech span {
-            border-color: #ffc200;
-            background: #2a2a2a;
-        }
-
-        /* Old Portfolio Cards - keep for compatibility */
-        .portfolio-card {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid #f0f0f0;
-            cursor: zoom-in;
-            transition: all 0.3s;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-        }
-
-        .portfolio-card:hover {
-            border-color: #ffc200;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.15);
-        }
-
-        .portfolio-img-wrap {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portfolio-img-wrap img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .portfolio-card:hover .portfolio-img-wrap img {
-            transform: scale(1.05);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(71, 69, 89, 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .portfolio-overlay i {
-            font-size: 40px;
-            color: #ffc200;
-        }
-
-        .portfolio-card:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .dark-mode .portfolio-card {
-            border-color: #333;
-            background: #1a1a1a;
-        }
-
-        /* Contact Cards */
-        .contact-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: center;
-            border: 2px solid #f0f0f0;
-            transition: all 0.3s;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-card:hover {
-            border-color: #ffc200;
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(255, 194, 0, 0.12);
-        }
-
-        .contact-card-icon {
-            font-size: 40px;
-            color: #ffc200;
-            margin-bottom: 12px;
-            line-height: 1;
-        }
-
-        .contact-card h5 {
-            font-weight: bold;
-            margin-bottom: 12px;
-            color: #474559;
-        }
-
-        .contact-card p {
-            font-size: 15px;
-            margin-bottom: 4px;
-        }
-
-        .contact-link {
-            display: inline-block;
-            margin-top: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #474559;
-            transition: color 0.3s;
-        }
-
-        .contact-link:hover {
-            color: #ffc200 !important;
-        }
-
-        .social-card-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            font-size: 13px;
-            font-weight: bold;
-            color: #474559;
-            transition: all 0.3s;
-        }
-
-        .social-card-link img {
-            transition: transform 0.3s;
-        }
-
-        .social-card-link:hover {
-            color: #ffc200 !important;
-        }
-
-        .social-card-link:hover img {
-            transform: scale(1.1);
-        }
-
-        .dark-mode .contact-card {
-            background: #1a1a1a;
-            border-color: #333;
-        }
-
-        .dark-mode .contact-card h5,
-        .dark-mode .contact-link,
-        .dark-mode .social-card-link {
-            color: #ccc;
-        }
-
-        /* Tech grid */
-        .tech-item {
-            transition: transform 0.3s;
-            cursor: default;
-        }
-
-        .tech-item:hover {
-            transform: translateY(-6px);
-        }
-
-        .tech-item img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            border-radius: 12px;
-            padding: 8px;
-            background: #fff;
-            border: 2px solid #f0f0f0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-            transition: border-color 0.3s;
-        }
-
-        .tech-item:hover img {
-            border-color: #ffc200;
-        }
-
-        .dark-mode .tech-item img {
-            background: #1a1a1a;
-            border-color: #333;
-        }
-    </style>
+        content="Portofolio Tri Putra Satriawan - Full-Stack & Backend Engineer berpengalaman dalam pengembangan sistem web dan RESTful API yang skalabel.">
+    <meta name="author" content="Tri Putra Satriawan">
+    <title>Tri Putra Satriawan | Full-Stack & Backend Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Theme Stylesheet -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
 </head>
 
-<body class="dark-mode">
+<body>
 
-    <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand"
-               href="index.html"><i class='uil uil-user'></i> Putra</a>
+            <a class="navbar-brand" href="#about">
+                <span class="brand-dot"></span> Putra Satriawan
+            </a>
 
-            <button class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars" style="color: var(--text-main);"></i>
             </button>
 
-            <div class="collapse navbar-collapse"
-                 id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="#about"
-                           class="nav-link"><span data-hover="About"
-                                  data-hover-id="nav-about">About</span></a>
+                        <a href="#about" class="nav-link active"><span data-hover-id="nav-about">About</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills"
-                           class="nav-link"><span data-hover="Skills"
-                                  data-hover-id="nav-skills">Skills</span></a>
+                        <a href="#skills" class="nav-link"><span data-hover-id="nav-skills">Skills</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#portfolio"
-                           class="nav-link"><span data-hover="Portfolio"
-                                  data-hover-id="nav-portfolio">Portfolio</span></a>
+                        <a href="#resume" class="nav-link"><span data-hover-id="nav-resume">Resume</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume"
-                           class="nav-link"><span data-hover="Resume"
-                                  data-hover-id="nav-resume">Resume</span></a>
+                        <a href="#portfolio" class="nav-link"><span data-hover-id="nav-portfolio">Portfolio</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact"
-                           class="nav-link"><span data-hover="Contact"
-                                  data-hover-id="nav-contact">Contact</span></a>
+                        <a href="#contact" class="nav-link"><span data-hover-id="nav-contact">Contact</span></a>
                     </li>
                 </ul>
 
-                <ul class="navbar-nav ml-lg-auto">
-                    <div class="ml-lg-4 d-flex align-items-center gap-3"
-                         style="gap:16px; display:flex!important;">
-                        <!-- Language Toggle -->
-                        <div class="lang-toggle mr-3">
-                            <button class="lang-btn"
-                                    id="btn-en"
-                                    onclick="setLang('en')">EN</button>
-                            <button class="lang-btn active"
-                                    id="btn-id"
-                                    onclick="setLang('id')">ID</button>
-                        </div>
-                        <!-- <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                            <i class="color-mode-icon"></i>
-                            Color mode
-                        </div> -->
-                    </div>
-                </ul>
+                <div class="lang-toggle ml-lg-3 mt-3 mt-lg-0">
+                    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+                    <button class="lang-btn active" id="btn-id" onclick="setLang('id')">ID</button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center"
-             id="about">
+    <!-- HERO / ABOUT -->
+    <section class="hero-section" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text">
-                        <small class="small-text">
-                            <span data-en="Welcome to "
-                                  data-id="Selamat datang di">Welcome to </span>
-                            <span class="mobile-block">
-                                <span data-en="my portfolio website!"
-                                      data-id="website portofolio saya!">my portfolio!</span>
-                            </span>
-                        </small>
-                        <h1 class="animated animated-text">
-                            <span class="mr-2"
-                                  data-en="Hey, I'm"
-                                  data-id="Hei, Saya">Hey, I'm</span>
-                            <div class="animated-info">
-                                <span class="animated-item">Putra</span>
-                                <span class="animated-item"
-                                      data-en="Web Developer"
-                                      data-id="Web Developer">Web Developer</span>
-                            </div>
-                        </h1>
-                        <br>
-                        <p data-en="Full-Stack Developer with 3+ years of experience specializing in backend systems, API development, and scalable web architecture. Experienced in building high-performance applications using Golang, Laravel, and CodeIgniter, with strong expertise in database optimization (MySQL & PostgreSQL) and caching using Redis. Proven track record of delivering 25+ projects. Passionate about writing clean, maintainable code and building scalable digital solutions."
-                           data-id="Full-Stack Developer dengan pengalaman 3+ tahun yang berspesialisasi dalam sistem backend, pengembangan API, dan arsitektur web yang skalabel. Berpengalaman membangun aplikasi berperforma tinggi menggunakan Golang, Laravel, dan CodeIgniter, dengan keahlian kuat dalam optimasi database (MySQL & PostgreSQL) dan caching menggunakan Redis. Rekam jejak terbukti dalam menyelesaikan 25+ proyek. Bersemangat menulis kode yang bersih dan mudah dipelihara serta membangun solusi digital yang skalabel.">
-                            Full-Stack Developer with 3+ years of experience specializing in backend systems, API
-                            development, and scalable web architecture. Experienced in building high-performance
-                            applications using Golang, Laravel, and CodeIgniter, with strong expertise in database
-                            optimization (MySQL & PostgreSQL) and caching using Redis. Proven track record of delivering
-                            25+ projects. Passionate about writing clean,
-                            maintainable code and building scalable digital solutions.
-                        </p>
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-12">
+                    <h1 class="hero-title">
+                        <span data-en="Hi, I'm " data-id="Halo, Saya ">Halo, Saya </span>
+                        <span class="gradient-text">Tri Putra Satriawan</span>
+                    </h1>
 
-                        <div class="custom-btn-group mt-4">
-                            <button class="btn mr-lg-2 custom-btn"
-                                    onclick="window.open('images/CV-PUTRA-NEW.pdf')">
-                                <i class='uil uil-file-alt'></i>
-                                <span data-en="Download Resume"
-                                      data-id="Unduh Resume">Download Resume</span>
-                            </button>
-                            <a href="#contact"
-                               class="btn custom-btn custom-btn-bg custom-btn-link">
-                                <span data-en="Check My Profile!"
-                                      data-id="Lihat Profil Saya!">Check My Profile!</span>
-                            </a>
-                        </div>
+                    <div class="hero-role-wrap">
+                        <span id="role-text">Backend Developer</span>
+                        <span class="typing-cursor"></span>
+                    </div>
+
+                    <p class="hero-desc"
+                        data-en="Full-Stack & Backend Developer with 4+ years of experience building high-performance APIs, scalable web architecture, and robust database systems using Golang, NestJS, Laravel, and Redis. Delivered 35+ projects across fintech, edtech, and enterprise applications."
+                        data-id="Full-Stack & Backend Developer dengan pengalaman 4+ tahun dalam membangun API berperforma tinggi, arsitektur web yang skalabel, dan optimasi database menggunakan Golang, NestJS, Laravel, dan Redis. Telah menyelesaikan 35+ proyek di bidang fintech, edtech, dan enterprise.">
+                        Full-Stack & Backend Developer dengan pengalaman 4+ tahun dalam membangun API berperforma
+                        tinggi, arsitektur web yang skalabel, dan optimasi database menggunakan Golang, NestJS, Laravel,
+                        dan Redis. Telah menyelesaikan 35+ proyek di bidang fintech, edtech, dan enterprise.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4" style="gap:16px;">
+                        <button class="btn-primary-gradient" onclick="window.open('images/CV-PUTRA-NEW.pdf')">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span data-en="Download Resume" data-id="Unduh Resume">Unduh Resume</span>
+                        </button>
+                        <a href="#portfolio" class="btn-secondary-glass">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span data-en="Explore Projects" data-id="Lihat Portofolio">Lihat Portofolio</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-12 col-12">
-                    <div class="about-image svg">
-                        <img src="images/profile.jpg"
-                             class="img-fluid"
-                             alt="Putra Profile"
-                             style="border-radius: 15px;">
+                <div class="col-lg-5 col-md-12 mt-5 mt-lg-0 text-center">
+                    <div class="profile-wrapper">
+                        <!-- Floating Tech Pills -->
+                        <div class="floating-pill pill-1">
+                            <img src="images/tech/golang.webp" alt="Golang"> Golang
+                        </div>
+                        <div class="floating-pill pill-2">
+                            <img src="images/tech/laravel.png" alt="Laravel"> Laravel
+                        </div>
+                        <div class="floating-pill pill-3">
+                            <img src="images/tech/vue.png" alt="Vue"> Vue.js
+                        </div>
+
+                        <div class="profile-card">
+                            <img src="images/profile.jpg" class="profile-img" alt="Tri Putra Satriawan Profile">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HIGHLIGHT STATS -->
-    <section class="py-5"
-             style="background:#0c0c0d;"
-             id="stats">
+    <!-- STATS SECTION -->
+    <section class="stats-section">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6 col-6 mb-4">
-                    <div class="highlight-card">
-                        <div class="icon"><i class="uil uil-briefcase-alt"></i></div>
-                        <h4>3+</h4>
-                        <p data-en="Years Experience"
-                           data-id="Tahun Pengalaman">Years Experience</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-6 mb-4">
+                    <div class="glass-card stat-card">
+                        <i class="fa-solid fa-laptop-code stat-icon"></i>
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label" data-en="Years Experience" data-id="Tahun Pengalaman">Tahun Pengalaman
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6 mb-4">
-                    <div class="highlight-card">
-                        <div class="icon"><i class="uil uil-check-circle"></i></div>
-                        <h4>25+</h4>
-                        <p data-en="Projects Completed"
-                           data-id="Proyek Selesai">Projects Completed</p>
+                <div class="col-lg-3 col-6 mb-4">
+                    <div class="glass-card stat-card">
+                        <i class="fa-solid fa-circle-check stat-icon" style="color: var(--accent-emerald);"></i>
+                        <div class="stat-number">35+</div>
+                        <div class="stat-label" data-en="Projects Delivered" data-id="Proyek Selesai">Proyek Selesai
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6 mb-4">
-                    <div class="highlight-card">
-                        <div class="icon"><i class="uil uil-building"></i></div>
-                        <h4>4</h4>
-                        <p data-en="Companies Worked"
-                           data-id="Perusahaan Bekerja">Companies Worked</p>
+                <div class="col-lg-3 col-6 mb-4">
+                    <div class="glass-card stat-card">
+                        <i class="fa-solid fa-building stat-icon" style="color: var(--accent-cyan);"></i>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label" data-en="Companies Worked" data-id="Perusahaan Bekerja">Perusahaan
+                            Bekerja</div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-6 mb-4">
-                    <div class="highlight-card">
-                        <div class="icon"><i class="uil uil-graduation-cap"></i></div>
-                        <h4>3.96</h4>
-                        <p data-en="GPA / 4.00"
-                           data-id="IPK / 4.00">GPA / 4.00</p>
+                <div class="col-lg-3 col-6 mb-4">
+                    <div class="glass-card stat-card">
+                        <i class="fa-solid fa-graduation-cap stat-icon" style="color: var(--accent-amber);"></i>
+                        <div class="stat-number">3.96</div>
+                        <div class="stat-label" data-en="GPA / 4.00 ()" data-id="IPK / 4.00 ()">IPK /
+                            4.00 ()</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHANIUS SPOTLIGHT FEATURE (NON-CARD OPEN SECTION) -->
+    <section class="techanius-spotlight-section py-5" id="techanius"
+        style="background: linear-gradient(180deg, rgba(10, 12, 20, 0) 0%, rgba(245, 158, 11, 0.05) 50%, rgba(10, 12, 20, 0) 100%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); position: relative; overflow: hidden;">
+
+        <!-- Ambient Glow Elements -->
+        <div
+            style="position: absolute; top: 20%; left: -100px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none;">
+        </div>
+        <div
+            style="position: absolute; bottom: 10%; right: -100px; width: 350px; height: 350px; background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0,0,0,0) 70%); pointer-events: none;">
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left Column: Logo Showcase & Social Pills -->
+                <div class="col-lg-4 col-md-5 text-center text-md-left mb-4 mb-md-0">
+                    <div class="d-inline-block position-relative mb-4">
+                        <img src="images/logo_techanius.jpeg" alt="Techanius Logo" class="img-fluid"
+                            style="width: 130px; height: 130px; border-radius: 30px; object-fit: cover; border: 2px solid var(--accent-amber); box-shadow: 0 0 40px rgba(245, 158, 11, 0.35);">
+                        <span class="badge-featured"
+                            style="position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); white-space: nowrap; margin: 0; background: var(--gradient-amber); color: #000; font-weight: 800; padding: 5px 14px; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);">
+                            OFFICIAL PLATFORM
+                        </span>
+                    </div>
+
+                    <h3 class="h3 mt-2 mb-1" style="color: var(--accent-amber); font-weight: 800;">Techanius</h3>
+                    <p class="text-muted small mb-4" data-en="Software Platform & Talent Ecosystem"
+                        data-id="Platform Software & Ekosistem Talent">Platform Software & Ekosistem Talent</p>
+
+                    <!-- Direct Action Buttons -->
+                    <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-2"
+                        style="gap:10px;">
+                        <a href="https://instagram.com/techanius" target="_blank" class="btn btn-sm"
+                            style="background: rgba(225, 48, 108, 0.15); border: 1px solid rgba(225, 48, 108, 0.4); color: #e1306c; border-radius: 50px; font-weight: 600; padding: 8px 18px; font-size: 0.85rem;">
+                            <i class="fa-brands fa-instagram mr-1"></i> Instagram
+                        </a>
+                        <a href="https://tiktok.com/@techanius" target="_blank" class="btn btn-sm"
+                            style="background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-subtle); color: #fff; border-radius: 50px; font-weight: 600; padding: 8px 18px; font-size: 0.85rem;">
+                            <i class="fa-brands fa-tiktok mr-1"></i> TikTok
+                        </a>
+                        <a href="https://techanius.com" target="_blank" class="btn btn-sm"
+                            style="background: rgba(245, 158, 11, 0.2); border: 1px solid var(--accent-amber); color: var(--accent-amber); border-radius: 50px; font-weight: 600; padding: 8px 18px; font-size: 0.85rem;">
+                            <i class="fa-solid fa-globe mr-1"></i> Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Open Editorial Narrative -->
+                <div class="col-lg-8 col-md-7">
+                    <div class="d-flex align-items-center gap-2 mb-3" style="gap:10px;">
+                        <span class="badge-role"
+                            style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: var(--accent-amber); font-size: 0.82rem; padding: 6px 16px;"
+                            data-en="Founder & Owner" data-id="Founder & Owner">Founder & Owner</span>
+                        <span class="badge-role"
+                            style="background: rgba(99, 102, 241, 0.15); border-color: rgba(99, 102, 241, 0.4); color: var(--accent-indigo); font-size: 0.82rem; padding: 6px 16px;"
+                            data-en="80+ Projects Completed" data-id="80+ Proyek Selesai">80+ Proyek Selesai</span>
+                    </div>
+
+                    <h2 class="h2 mb-3 text-white" style="font-weight: 800; line-height: 1.25;"
+                        data-en="Platform Dedicated to Student Coding & Software Solutions"
+                        data-id="Platform Spesialis Tugas Koding Mahasiswa & Solusi Software">Platform Spesialis Tugas
+                        Koding Mahasiswa & Solusi Software</h2>
+
+                    <p class="hero-desc mb-4" style="font-size: 1.05rem; line-height: 1.7; color: var(--text-muted);"
+                        data-en="Techanius is a software platform & agency specializing in resolving student coding assignments, final thesis projects, as well as custom small to enterprise-scale web applications. As Founder & Owner, besides coding projects directly, I actively share and delegate project tasks to my trusted network of talent developers."
+                        data-id="Techanius adalah platform & agensi software development yang berfokus pada penyelesaian tugas kodingan mahasiswa, skripsi / tugas akhir, hingga proyek sistem web skala kecil dan besar. Sebagai Owner & Lead Developer, selain mengeksekusi kodingan secara langsung, saya juga aktif membagi dan mengelola proyek (project sharing) kepada jaringan talent developer berbakat.">
+                        Techanius adalah platform & agensi software development yang berfokus pada penyelesaian
+                        tugas kodingan mahasiswa, skripsi / tugas akhir, hingga proyek sistem web skala kecil dan
+                        besar. Sebagai Owner & Lead Developer, selain mengeksekusi kodingan secara langsung, saya
+                        juga aktif membagi dan mengelola proyek (project sharing) kepada jaringan talent developer
+                        berbakat.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center gap-3"
+                                style="font-size: 0.95rem; color: var(--text-main); font-weight: 600; background: rgba(255, 255, 255, 0.03); padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+                                <i class="fa-solid fa-graduation-cap text-warning" style="font-size: 1.3rem;"></i>
+                                <span data-en="Student Thesis & Coding Assignments"
+                                    data-id="Tugas Mahasiswa & Skripsi Coding">Tugas Mahasiswa & Skripsi Coding</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center gap-3"
+                                style="font-size: 0.95rem; color: var(--text-main); font-weight: 600; background: rgba(255, 255, 255, 0.03); padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+                                <i class="fa-solid fa-cubes text-warning" style="font-size: 1.3rem;"></i>
+                                <span data-en="Small & Large Scale Software"
+                                    data-id="Proyek Software Skala Kecil & Besar">Proyek Software Skala Kecil &
+                                    Besar</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center gap-3"
+                                style="font-size: 0.95rem; color: var(--text-main); font-weight: 600; background: rgba(255, 255, 255, 0.03); padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+                                <i class="fa-solid fa-users-gear text-warning" style="font-size: 1.3rem;"></i>
+                                <span data-en="Talent Sharing & Delegation"
+                                    data-id="Distribusi Proyek ke Talent Developer">Distribusi Proyek ke Talent
+                                    Developer</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <div class="d-flex align-items-center gap-3"
+                                style="font-size: 0.95rem; color: var(--text-main); font-weight: 600; background: rgba(255, 255, 255, 0.03); padding: 12px 18px; border-radius: 14px; border: 1px solid var(--border-subtle);">
+                                <i class="fa-solid fa-shield-halved text-warning" style="font-size: 1.3rem;"></i>
+                                <span data-en="Full Warranty & Guidance"
+                                    data-id="Pengawalan Penuh & Garansi Nilai">Pengawalan Penuh & Garansi Nilai</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1060,693 +279,1006 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section class="skills-section"
-             id="skills">
+    <section class="skills-section" id="skills">
         <div class="container">
-            <h2 class="mb-2"
-                data-en="Skills &amp; Expertise"
-                data-id="Keahlian &amp; Kompetensi">Skills &amp; Expertise</h2>
-            <p class="mb-5"
-               data-en="Technologies and tools I work with professionally."
-               data-id="Teknologi dan alat yang saya gunakan secara profesional.">Technologies and tools I work with
-                professionally.</p>
-
-            <div class="row">
-                <!-- Skills Tags - full width now -->
-                <div class="col-12 mb-5">
-                    <div class="skill-category">
-                        <div class="skill-category-title"
-                             data-en="Backend"
-                             data-id="Backend">Backend</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><img src="images/tech/laravel.png"
-                                     alt="Laravel"> Laravel</span>
-                            <span class="skill-tag"><img src="images/tech/golang.webp"
-                                     alt="Golang"> Golang</span>
-                            <span class="skill-tag"><img src="images/tech/ci.png"
-                                     alt="CI"> CodeIgniter</span>
-                            <span class="skill-tag"><img src="images/tech/php.png"
-                                     alt="PHP"> PHP</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> REST API</span>
-
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title"
-                             data-en="Frontend"
-                             data-id="Frontend">Frontend</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><img src="images/tech/vue.png"
-                                     alt="Vue"> Vue.js</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> Nuxt.js</span>
-                            <span class="skill-tag"><img src="images/tech/js.png"
-                                     alt="JS"> JavaScript</span>
-                            <span class="skill-tag"><img src="images/tech/jquery.png"
-                                     alt="jQuery"> jQuery</span>
-                            <span class="skill-tag"><img src="images/tech/bootstrap.png"
-                                     alt="Bootstrap"> Bootstrap</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title"
-                             data-en="Database"
-                             data-id="Database">Database</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><img src="images/tech/mysql.png"
-                                     alt="MySQL"> MySQL</span>
-                            <span class="skill-tag"><img src="images/tech/posgresql.png"
-                                     alt="PostgreSQL"> PostgreSQL</span>
-                            <span class="skill-tag"><img src="images/tech/reddis.png"
-                                     alt="Redis"> Redis</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="skill-category-title"
-                             data-en="Tools & Others"
-                             data-id="Alat &amp; Lainnya">Tools &amp; Others</div>
-                        <div class="skill-tags">
-                            <span class="skill-tag"><span class="skill-dot"></span> Git</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> Docker</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> Linux</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> Postman</span>
-                            <span class="skill-tag"><span class="skill-dot"></span> AJAX</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RESUME -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center"
-             id="resume">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <h2 class="mb-4"
-                        data-en="Experiences"
-                        data-id="Pengalaman Kerja">Experiences</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2025</span></div>
-                            <div class="timeline-info">
-                                <h3><span data-en="Backend Developer"
-                                          data-id="Backend Developer">Backend Developer</span>
-                                    <small>PT Rahadhyan Integrasi Nusantara &amp; PT Rahadhyan International Capital
-                                        Haven</small>
-                                </h3>
-                                <h6>Sep 2025 - Present</h6>
-                                <p data-en="Developed scalable backend systems and RESTful APIs for multiple platforms including Ayomuslim, Ayosiswa, and YourPacker. Built high-performance services using Golang and Laravel, optimized databases (MySQL & PostgreSQL), and implemented Redis caching to improve system performance. Collaborated with cross-functional teams to deliver reliable and scalable digital solutions."
-                                   data-id="Mengembangkan sistem backend yang skalabel dan RESTful API untuk berbagai platform termasuk Ayomuslim, Ayosiswa, dan YourPacker. Membangun layanan berperforma tinggi menggunakan Golang dan Laravel, mengoptimalkan database (MySQL & PostgreSQL), dan mengimplementasikan Redis caching untuk meningkatkan performa sistem. Berkolaborasi dengan tim lintas fungsi untuk menghasilkan solusi digital yang andal dan skalabel.">
-                                    Developed scalable backend systems and RESTful APIs for multiple platforms including
-                                    Ayomuslim, Ayosiswa, and YourPacker. Built high-performance services using Golang
-                                    and Laravel, optimized databases (MySQL &amp; PostgreSQL), and implemented Redis
-                                    caching to improve system performance.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2024</span></div>
-                            <div class="timeline-info">
-                                <h5><span data-en="Full Stack Web Developer"
-                                          data-id="Full Stack Web Developer">Full Stack Web Developer</span>
-                                    <small>PT Satustop Finansial Solusi</small>
-                                </h5>
-                                <h6>Mei 2024 - Sep 2025</h6>
-                                <p data-en="Developed and maintained full-stack fintech applications including CMS, P2P lending systems, and dashboards. Built RESTful APIs and asynchronous features using AJAX and jQuery. Implemented dynamic frontend using Vue.js to enhance user experience and performance."
-                                   data-id="Mengembangkan dan memelihara aplikasi fintech full-stack termasuk CMS, sistem P2P lending, dan dashboard. Membangun RESTful API dan fitur asinkron menggunakan AJAX dan jQuery. Mengimplementasikan frontend dinamis menggunakan Vue.js untuk meningkatkan pengalaman dan performa pengguna.">
-                                    Developed and maintained full-stack fintech applications including CMS, P2P lending
-                                    systems, and dashboards. Built RESTful APIs and asynchronous features using AJAX and
-                                    jQuery. Implemented dynamic frontend using Vue.js.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2022</span></div>
-                            <div class="timeline-info">
-                                <h3><span data-en="Full Stack Web Developer"
-                                          data-id="Full Stack Web Developer">Full Stack Web Developer</span>
-                                    <small>PT Buni Pandawa Teknologi</small>
-                                </h3>
-                                <h6>Des 2022 - Feb 2025</h6>
-                                <p data-en="Developed and maintained multiple web applications for clients including Surveyor Indonesia, PTSI, OMDC, and Jabar Quick Response. Handled full development lifecycle: system design, implementation, optimization, and debugging. Integrated APIs and optimized database performance for real-time business processes."
-                                   data-id="Mengembangkan dan memelihara berbagai aplikasi web untuk klien termasuk Surveyor Indonesia, PTSI, OMDC, dan Jabar Quick Response. Menangani siklus pengembangan penuh: desain sistem, implementasi, optimasi, dan debugging. Mengintegrasikan API dan mengoptimalkan performa database untuk proses bisnis real-time.">
-                                    Developed and maintained multiple web applications for clients including Surveyor
-                                    Indonesia, PTSI, OMDC, and Jabar Quick Response. Handled full development lifecycle
-                                    and integrated APIs.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>All Time</span></div>
-                            <div class="timeline-info">
-                                <h3><span data-en="Founder &amp; Developer"
-                                          data-id="Pendiri &amp; Developer">Founder &amp; Developer</span>
-                                    <small>Techanius</small>
-                                </h3>
-                                <h6 data-en="All Time"
-                                    data-id="Sepanjang Waktu">All Time</h6>
-                                <p data-en="Founded Techanius as a freelance web development agency. Led 25+ projects from small business sites to large-scale applications, acting as both developer and project manager. Mentored junior developers and delivered scalable, client-focused solutions."
-                                   data-id="Mendirikan Techanius sebagai agen pengembangan web freelance. Memimpin 25+ proyek dari situs bisnis kecil hingga aplikasi skala besar, bertindak sebagai developer sekaligus project manager. Membimbing developer junior dan menghasilkan solusi yang skalabel dan berfokus pada klien.">
-                                    Founded Techanius as a freelance web development agency. Led 25+ projects, acting as
-                                    both developer and project manager. Mentored junior developers and delivered
-                                    scalable, client-focused solutions.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2022</span></div>
-                            <div class="timeline-info">
-                                <h3><span data-en="Startup Developer"
-                                          data-id="Startup Developer">Startup Developer</span>
-                                    <small>Ensiklotari, Accome, Edutrack</small>
-                                </h3>
-                                <h6>Jun 2022 - Jun 2023</h6>
-                                <p data-en="Built multiple startup platforms: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), and Edutrack (psychotest platform). Focused on scalable architecture, API integration, and user experience."
-                                   data-id="Membangun berbagai platform startup: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), dan Edutrack (platform psikotes). Berfokus pada arsitektur yang skalabel, integrasi API, dan pengalaman pengguna.">
-                                    Built multiple startup platforms: Ensiklotari (Nuxt.js), Accome (CodeIgniter 3), and
-                                    Edutrack. Focused on scalable architecture, API integration, and user experience.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <h2 class="mb-4 mobile-mt-2"
-                        data-en="Educations"
-                        data-id="Pendidikan">Educations</h2>
-
-                    <div class="timeline">
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2018</span></div>
-                            <div class="timeline-info">
-                                <h5><span>Smk Bakti Nusantara 666</span><small data-en="Software Engineering"
-                                           data-id="Rekayasa Perangkat Lunak">Software Engineering</small></h5>
-                                <h6>Mar 2018 - Jun 2021</h6>
-                                <p data-en="Specialized in Software Engineering. Final project: School Fee Payment application using CodeIgniter 3, scored 98. Demonstrated strong understanding of web development and practical software solutions."
-                                   data-id="Spesialisasi Rekayasa Perangkat Lunak. Proyek akhir: Aplikasi Pembayaran SPP menggunakan CodeIgniter 3, mendapat nilai 98. Menunjukkan pemahaman kuat tentang pengembangan web dan solusi perangkat lunak praktis.">
-                                    Specialized in Software Engineering. Final project: School Fee Payment application
-                                    using CodeIgniter 3, scored 98.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-wrapper">
-                            <div class="timeline-yr"><span>2021</span></div>
-                            <div class="timeline-info">
-                                <h3><span>Ars University</span><small data-en="Informatics Engineering"
-                                           data-id="Teknik Informatika">Informatics Engineering</small></h3>
-                                <h6>Sep 2021 - Sep 2025</h6>
-                                <p data-en="Bachelor Degree in Informatics Engineering at Ars University, Bandung (2021–2025) with GPA 3.96/4.00. Active in startup competitions and digital innovation programs. Speaker on 'Kerja Sambil Kuliah' podcast."
-                                   data-id="Sarjana Teknik Informatika di Universitas Ars, Bandung (2021–2025) dengan IPK 3.96/4.00. Aktif dalam kompetisi startup dan program inovasi digital. Pembicara di podcast 'Kerja Sambil Kuliah'.">
-                                    Bachelor Degree in Informatics Engineering at Ars University, Bandung (2021–2025)
-                                    with GPA 3.96/4.00. Active in startup competitions and digital innovation programs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section class="py-5"
-             id="portfolio"
-             style="background:#1a1a1a;">
-        <div class="container">
-            <h2 class="mb-2 text-white"
-                data-en="Portfolio"
-                data-id="Portofolio">Portfolio</h2>
-            <p class="mb-5"
-               style="color:#aaa;"
-               data-en="Showcasing my work across freelance projects and company collaborations."
-               data-id="Menampilkan karya saya di berbagai proyek freelance dan kolaborasi perusahaan.">Showcasing my
-                work across freelance projects and company collaborations.</p>
-
-            <!-- Freelance Projects -->
-            <div class="portfolio-section-header">
-                <h4 data-en="Freelance Projects"
-                    data-id="Proyek Freelance">Freelance Projects</h4>
-                <p data-en="Custom solutions built for diverse clients through Techanius"
-                   data-id="Solusi custom yang dibangun untuk berbagai klien melalui Techanius">Custom solutions built
-                    for diverse clients through Techanius</p>
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="section-title" data-en="Skills & Expertise" data-id="Keahlian & Spesialisasi">Keahlian &
+                    Spesialisasi</h2>
+                <p class="section-subtitle" data-en="Technologies and frameworks I utilize to build scalable solutions."
+                    data-id="Teknologi dan framework yang saya gunakan untuk membangun solusi web modern.">Teknologi dan
+                    framework yang saya gunakan untuk membangun solusi web modern.</p>
             </div>
 
-            <!-- Techanius Stats Banner -->
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2"
-                         onclick="openLightbox('porto/freelance/7.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/freelance/7.png"
-                                 alt="Xorix Outdoor"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-role-badge"
-                                  data-en="Backend Developer"
-                                  data-id="Backend Developer">Backend Developer</span>
-                            <h5 data-en="Xorix Outdoor"
-                                data-id="Xorix Outdoor">Xorix Outdoor</h5>
-                            <p data-en="Full-featured e-commerce website with complete payment gateway integration and shipping management system"
-                               data-id="Website e-commerce lengkap dengan integrasi payment gateway dan sistem manajemen pengiriman">
-                                Full-featured e-commerce website with complete payment gateway integration and shipping
-                                management system</p>
-                            <div class="portfolio-tech">
-                                <span>Laravel</span>
-                                <span>Vue.js</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2"
-                         onclick="openLightbox('porto/freelance/1.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/freelance/1.png"
-                                 alt="Geolocation Attendance System"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-role-badge"
-                                  data-en="Full Stack Developer"
-                                  data-id="Full Stack Developer">Full Stack Developer</span>
-                            <h5 data-en="Geolocation Attendance & Payroll System"
-                                data-id="Sistem Absensi Geolokasi & Penggajian">Geolocation Attendance & Payroll System
-                            </h5>
-                            <p data-en="Geolocation-based attendance and payroll management system for SMA YPKKP Bandung"
-                               data-id="Sistem absensi berbasis geolokasi dan manajemen penggajian untuk SMA YPKKP Bandung">
-                                Geolocation-based attendance and payroll management system for SMA YPKKP Bandung</p>
-                            <div class="portfolio-tech">
-                                <span>Codeigniter</span>
-                                <span>MySQL</span>
-                                <span>Geolocation API</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2"
-                         onclick="openLightbox('porto/freelance/3.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/freelance/3.png"
-                                 alt="Wedding Invitation Platform"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-role-badge"
-                                  data-en="Full Stack Developer"
-                                  data-id="Full Stack Developer">Full Stack Developer</span>
-                            <h5 data-en="Wedding Invitation Platform"
-                                data-id="Platform Undangan Pernikahan">Wedding Invitation Platform</h5>
-                            <p data-en="Online wedding invitation platform with multiple customizable templates for modern couples"
-                               data-id="Platform undangan pernikahan online dengan berbagai template yang dapat disesuaikan untuk pasangan modern">
-                                Online wedding invitation platform with multiple customizable templates for modern
-                                couples</p>
-                            <div class="portfolio-tech">
-                                <span>Html</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2"
-                         onclick="openLightbox('porto/freelance/5.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/freelance/5.png"
-                                 alt="Baknus School Payment System"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-role-badge"
-                                  data-en="Full Stack Developer"
-                                  data-id="Full Stack Developer">Full Stack Developer</span>
-                            <h5 data-en="Baknus School Payment System"
-                                data-id="Sistem Pembayaran Sekolah Baknus">Baknus School Payment System</h5>
-                            <p data-en="School payment management system built for SMK research needs, featuring tuition fee payment and financial reporting"
-                               data-id="Sistem manajemen pembayaran sekolah yang dibangun untuk kebutuhan penelitian SMK, dengan fitur pembayaran SPP dan pelaporan keuangan">
-                                School payment management system built for SMK research needs, featuring tuition fee
-                                payment and financial reporting</p>
-                            <div class="portfolio-tech">
-                                <span>CodeIgniter</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2"
-                         onclick="openLightbox('porto/freelance/6.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/freelance/6.png"
-                                 alt="Edutrack"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-role-badge"
-                                  data-en="Full Stack Developer"
-                                  data-id="Full Stack Developer">Full Stack Developer</span>
-                            <h5 data-en="Edutrack - Educational Assessment Platform"
-                                data-id="Edutrack - Platform Penilaian Pendidikan">Edutrack - Educational Assessment
-                                Platform</h5>
-                            <p data-en="Startup platform for educational assessment competition. Users complete questionnaires to receive personalized educational path recommendations"
-                               data-id="Platform startup untuk kompetisi penilaian pendidikan. Pengguna mengisi kuesioner untuk menerima rekomendasi jalur pendidikan yang dipersonalisasi">
-                                Startup platform for educational assessment competition. Users complete questionnaires
-                                to receive personalized educational path recommendations</p>
-                            <div class="portfolio-tech">
-                                <span>Codeigniter</span>
-                                <span>MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Techanius Info Card -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="techanius-info-card h-100">
-                        <div class="techanius-card-icon">
-                            <i class="uil uil-rocket"></i>
-                        </div>
-                        <h5 data-en="30+ More Projects"
-                            data-id="30+ Proyek Lainnya">30+ More Projects</h5>
-                        <p data-en="At Techanius, I've successfully delivered 30+ coding solutions, including:"
-                           data-id="Di Techanius, Saya telah berhasil menyelesaikan 30+ solusi coding, termasuk:">
-                            At Techanius, I've successfully delivered 30+ coding solutions, including:</p>
-                        <ul class="techanius-list">
-                            <li data-en="Helping students complete their thesis coding projects"
-                                data-id="Membantu Mahasiswa & Siswa Menyelesaikan Skripsi Codingan nya">Helping students
-                                complete their thesis coding projects</li>
-                            <li data-en="Assisting students with coding assignments to achieve top grades"
-                                data-id="Membantu Mahasiswa & Siswa Menyelesaikan Tugas Coding Dengan Nilai Terbaik">
-                                Assisting students with coding assignments to achieve top grades</li>
-                            <li data-en="Building custom web applications for businesses"
-                                data-id="Membangun aplikasi web custom untuk bisnis">Building custom web applications
-                                for businesses</li>
-                            <li data-en="Developing e-commerce and management systems"
-                                data-id="Mengembangkan sistem e-commerce dan manajemen">Developing e-commerce and
-                                management systems</li>
-                        </ul>
-                        <div class="techanius-card-footer">
-                            <span class="techanius-badge"
-                                  data-en="Founder & Lead Developer"
-                                  data-id="Pendiri & Lead Developer">Founder & Lead Developer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Company Projects -->
-            <div class="portfolio-section-header mt-5">
-                <h4 data-en="Company Projects"
-                    data-id="Proyek Perusahaan">Company Projects</h4>
-                <p data-en="Enterprise solutions developed during professional engagements"
-                   data-id="Solusi enterprise yang dikembangkan selama keterlibatan profesional">Enterprise solutions
-                    developed during professional engagements</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2 portfolio-card-featured"
-                         onclick="openLightbox('porto/work/1.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/work/1.png"
-                                 alt="Ayo Siswa"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-badge"
-                                  data-en="Featured"
-                                  data-id="Unggulan">Featured</span>
-                            <span class="portfolio-role-badge"
-                                  data-en="Backend Developer"
-                                  data-id="Backend Developer">Backend Developer</span>
-                            <h5 data-en="Ayo Siswa - Complete School Management Platform"
-                                data-id="Ayo Siswa - Platform Manajemen Sekolah Lengkap">Ayo Siswa - Complete School
-                                Management Platform</h5>
-                            <p data-en="Full-featured application for comprehensive school needs including student management, attendance tracking, grading system, and parent-teacher communication portal. Built for PT Rahadhyan."
-                               data-id="Aplikasi lengkap untuk kebutuhan sekolah komprehensif termasuk manajemen siswa, pelacakan kehadiran, sistem penilaian, dan portal komunikasi orang tua-guru. Dibangun untuk PT Rahadhyan.">
-                                Full-featured application for comprehensive school needs including student management,
-                                attendance tracking, grading system, and parent-teacher communication portal. Built for
-                                PT Rahadhyan.</p>
-                            <div class="portfolio-tech">
-                                <span>Laravel</span>
-                                <span>Mysql</span>
-                                <span>Redis</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12 mb-4">
-                    <div class="portfolio-card-v2 portfolio-card-featured"
-                         onclick="openLightbox('porto/work/2.png')">
-                        <div class="portfolio-img-wrap-v2">
-                            <img src="porto/work/2.png"
-                                 alt="Ayo Muslim"
-                                 class="img-fluid">
-                            <div class="portfolio-overlay-v2">
-                                <i class="uil uil-search-plus"></i>
-                            </div>
-                        </div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-badge"
-                                  data-en="Featured"
-                                  data-id="Unggulan">Featured</span>
-                            <span class="portfolio-role-badge"
-                                  data-en="Backend Developer"
-                                  data-id="Backend Developer">Backend Developer</span>
-                            <h5 data-en="Ayo Muslim - Islamic Companion App"
-                                data-id="Ayo Muslim - Aplikasi Pendamping Islami">Ayo Muslim - Islamic Companion App
-                            </h5>
-                            <p data-en="Comprehensive Islamic application featuring Quran reading, Hadith collections, religious consultation, dhikr counter, and prayer guides. High-performance backend with optimized content delivery. Built for PT Rahadhyan."
-                               data-id="Aplikasi Islami komprehensif dengan fitur baca Quran, koleksi Hadist, konsultasi agama, penghitung dzikir, dan panduan sholat. Backend berperforma tinggi dengan pengiriman konten yang dioptimalkan. Dibangun untuk PT Rahadhyan.">
-                                Comprehensive Islamic application featuring Quran reading, Hadith collections, religious
-                                consultation, dhikr counter, and prayer guides. High-performance backend with optimized
-                                content delivery. Built for PT Rahadhyan.</p>
-                            <div class="portfolio-tech">
-                                <span>Nest</span>
-                                <span>Laravel</span>
-                                <span>Redis</span>
-                                <span>MySQL</span>
-                                <span>PostgreSQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Company Experience Info Card -->
-                <div class="col-12 mb-4">
-                    <div class="company-experience-card">
-                        <div class="experience-header">
-                            <div class="experience-icon">
-                                <i class="uil uil-building"></i>
+            <div class="row g-4">
+                <!-- Backend -->
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fa-solid fa-server"></i>
                             </div>
                             <div>
-                                <h5 data-en="Company Projects"
-                                    data-id="Proyek Perusahaan">Company Projects</h5>
-                                <p data-en="Beyond the featured projects, I've contributed to multiple enterprise solutions:"
-                                   data-id="Selain proyek unggulan, saya telah berkontribusi pada berbagai solusi enterprise:">
-                                    Beyond the featured projects, I've contributed to multiple enterprise solutions:</p>
+                                <h4 data-en="Backend Architecture" data-id="Arsitektur Backend">Arsitektur Backend</h4>
                             </div>
                         </div>
-
-                        <div class="experience-content">
-                            <div class="experience-company">
-                                <h6 data-en="PT Satustop Finansial Solusi"
-                                    data-id="PT Satustop Finansial Solusi">PT Satustop Finansial Solusi</h6>
-                                <ul class="experience-list">
-                                    <li data-en="P2P Lending Platform - Frontend (CodeIgniter, Bootstrap, MySQL)"
-                                        data-id="Platform P2P Lending - Frontend (CodeIgniter, Bootstrap, MySQL)">P2P
-                                        Lending Platform - Frontend (CodeIgniter, Bootstrap, MySQL)</li>
-                                    <li data-en="CMS System (CodeIgniter, Bootstrap, MySQL)"
-                                        data-id="Sistem CMS (CodeIgniter, Bootstrap, MySQL)">CMS System (CodeIgniter,
-                                        Bootstrap, MySQL)</li>
-                                    <li data-en="API Backend (CodeIgniter, MySQL)"
-                                        data-id="API Backend (CodeIgniter, MySQL)">API Backend (CodeIgniter, MySQL)</li>
-                                    <li data-en="Landing Page (Vue.js, Vuetify)"
-                                        data-id="Landing Page (Vue.js, Vuetify)">Landing Page (Vue.js, Vuetify)</li>
-                                </ul>
-                            </div>
-
-                            <div class="experience-company">
-                                <h6 data-en="PT Buni Pandawa Teknologi"
-                                    data-id="PT Buni Pandawa Teknologi">PT Buni Pandawa Teknologi</h6>
-                                <ul class="experience-list">
-                                    <li data-en="SIMDU - PT Surveyor Indonesia (CodeIgniter)"
-                                        data-id="SIMDU - PT Surveyor Indonesia (CodeIgniter)">SIMDU - PT Surveyor
-                                        Indonesia (CodeIgniter)</li>
-                                    <li data-en="KPU Jabar System (CodeIgniter)"
-                                        data-id="Sistem KPU Jabar (CodeIgniter)">KPU Jabar System (CodeIgniter)</li>
-                                    <li data-en="JQR HRIS - Human Resource Management (CodeIgniter)"
-                                        data-id="JQR HRIS - Manajemen Sumber Daya Manusia (CodeIgniter)">JQR HRIS -
-                                        Human Resource Management (CodeIgniter)</li>
-                                    <li data-en="JQR Disaster Mapping System (CodeIgniter)"
-                                        data-id="Sistem Pemetaan Bencana JQR (CodeIgniter)">JQR Disaster Mapping System
-                                        (CodeIgniter)</li>
-                                    <li data-en="JQR Complaint & Recommendation System (CodeIgniter)"
-                                        data-id="Sistem Aduan & Rekomendasi JQR (CodeIgniter)">JQR Complaint &
-                                        Recommendation System (CodeIgniter)</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="experience-footer">
-                            <span class="experience-badge"
-                                  data-en="Full Stack Developer"
-                                  data-id="Full Stack Developer">Full Stack Developer</span>
+                        <div class="skill-tags-grid">
+                            <span class="skill-pill"><img src="images/tech/golang.webp" alt="Golang"> Golang</span>
+                            <span class="skill-pill"><img src="images/tech/laravel.png" alt="Laravel"> Laravel</span>
+                            <span class="skill-pill"><span class="skill-dot-indicator"></span> NestJS</span>
+                            <span class="skill-pill"><img src="images/tech/ci.png" alt="CodeIgniter"> CodeIgniter</span>
+                            <span class="skill-pill"><img src="images/tech/php.png" alt="PHP"> PHP</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Frontend -->
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon"
+                                style="background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.3); color: var(--accent-cyan);">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 data-en="Frontend Engineering" data-id="Pengembangan Frontend">Pengembangan Frontend
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="skill-tags-grid">
+                            <span class="skill-pill"><img src="images/tech/vue.png" alt="Vue"> Vue.js</span>
+                            <span class="skill-pill"><span class="skill-dot-indicator"
+                                    style="background: var(--accent-cyan);"></span> Nuxt.js</span>
+                            <span class="skill-pill"><img src="images/tech/js.png" alt="JS"> JavaScript</span>
+                            <span class="skill-pill"><img src="images/tech/jquery.png" alt="jQuery"> jQuery</span>
+                            <span class="skill-pill"><img src="images/tech/bootstrap.png" alt="Bootstrap">
+                                Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Caching -->
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon"
+                                style="background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3); color: var(--accent-amber);">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div>
+                                <h4 data-en="Database & Caching" data-id="Database & Caching">Database & Caching</h4>
+                            </div>
+                        </div>
+                        <div class="skill-tags-grid">
+                            <span class="skill-pill"><img src="images/tech/mysql.png" alt="MySQL"> MySQL</span>
+                            <span class="skill-pill"><img src="images/tech/posgresql.png" alt="PostgreSQL">
+                                PostgreSQL</span>
+                            <span class="skill-pill"><img src="images/tech/reddis.png" alt="Redis"> Redis Cache</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="col-lg-6 mb-4">
+                    <div class="glass-card skill-category-card">
+                        <div class="category-header">
+                            <div class="category-icon"
+                                style="background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3); color: var(--accent-emerald);">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <div>
+                                <h4 data-en="DevOps & Tools" data-id="Alat & DevOps">Alat & DevOps</h4>
+                            </div>
+                        </div>
+                        <div class="skill-tags-grid">
+                            <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                            <span class="skill-pill"><i class="fa-brands fa-docker"></i> Docker</span>
+                            <span class="skill-pill"><i class="fa-brands fa-linux"></i> Linux</span>
+                            <span class="skill-pill"><span class="skill-dot-indicator"
+                                    style="background: var(--accent-emerald);"></span> Postman</span>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-        </div>
         </div>
     </section>
 
-    <!-- LIGHTBOX -->
-    <div id="lightbox"
-         onclick="closeLightbox()"
-         style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:99999; align-items:center; justify-content:center; cursor:zoom-out;">
-        <img id="lightbox-img"
-             src=""
-             alt=""
-             style="max-width:90vw; max-height:90vh; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.5);">
-    </div>
-
-    <!-- CONTACT -->
-    <section class="contact py-5"
-             id="contact">
+    <!-- RESUME / TIMELINE SECTION -->
+    <section class="timeline-section" id="resume">
         <div class="container">
+            <div class="row">
+                <!-- Experiences -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="section-title mb-4" data-en="Work Experience" data-id="Pengalaman Kerja">Pengalaman Kerja
+                    </h2>
 
-            <h2 class="mb-5 text-center"
-                data-en="Contact"
-                data-id="Kontak">Contact</h2>
+                    <div class="timeline-box">
+                        <!-- Item 1: Rahadhyan -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge">Sep 2025 - Present</span>
+                                <h4 class="timeline-role" data-en="Backend Developer" data-id="Backend Developer">
+                                    Backend Developer</h4>
+                                <div class="timeline-company">PT Rahadhyan Integrasi Nusantara & PT Rahadhyan
+                                    International</div>
+                                <p class="timeline-text mb-3"
+                                    data-en="Developing scalable backend services & high-availability RESTful APIs using Laravel & Golang with Redis caching and database query optimization."
+                                    data-id="Mengembangkan layanan backend skala besar & RESTful API berperforma tinggi menggunakan Laravel & Golang dengan Redis caching dan optimasi database.">
+                                    Mengembangkan layanan backend skala besar & RESTful API berperforma tinggi
+                                    menggunakan Laravel & Golang dengan Redis caching dan optimasi database.
+                                </p>
+                                <div class="company-projects-list">
+                                    <h6 data-en="Key Enterprise Projects (Laravel & Golang):"
+                                        data-id="Proyek Utama RIN (Laravel & Golang):">Proyek Utama RIN (Laravel &
+                                        Golang):</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-indigo mt-1"
+                                                style="color: var(--accent-indigo);"></i>
+                                            <div>
+                                                <strong>API Ayo Siswa (Laravel):</strong> <span
+                                                    data-en="Integrated EdTech API infrastructure for school management, attendance, & grading."
+                                                    data-id="Infrastruktur API manajemen sekolah, pelacakan kehadiran, & sistem penilaian.">Infrastruktur
+                                                    API manajemen sekolah, pelacakan kehadiran, & sistem
+                                                    penilaian.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-indigo mt-1"
+                                                style="color: var(--accent-indigo);"></i>
+                                            <div>
+                                                <strong>API Ayo Muslim (Laravel):</strong> <span
+                                                    data-en="High-availability RESTful API for digital Quran, prayer times, & Islamic consultation."
+                                                    data-id="Scalable RESTful API untuk Al-Qur'an digital, jadwal sholat geolokasi & layanan Islami.">Scalable
+                                                    RESTful API untuk Al-Qur'an digital, jadwal sholat geolokasi &
+                                                    layanan Islami.</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-indigo mt-1"
+                                                style="color: var(--accent-indigo);"></i>
+                                            <div>
+                                                <strong>API Yourpacker (Golang):</strong> <span
+                                                    data-en="Logistics & travel booking API service with shipment tracking capabilities."
+                                                    data-id="Platform API logistik, pengiriman barang, & pemesanan perjalanan terpadu.">Platform
+                                                    API logistik, pengiriman barang, & pemesanan perjalanan
+                                                    terpadu.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="row justify-content-center mb-5">
+                        <!-- Item 2: Sanders -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge">Mei 2024 - Sep 2025</span>
+                                <h4 class="timeline-role" data-en="Full Stack Web Developer"
+                                    data-id="Full Stack Web Developer">Full Stack Web Developer</h4>
+                                <div class="timeline-company">Sanders (PT Satustop Finansial Solusi)</div>
+                                <p class="timeline-text mb-3"
+                                    data-en="Full-stack engineering for Sanders P2P lending fintech ecosystem using CodeIgniter 3 & Vue.js, architecture of internal core tools, admin dashboards, and borrower portals."
+                                    data-id="Pengembangan full-stack untuk ekosistem fintech P2P Lending Sanders berbasis CodeIgniter 3 & Vue.js, merancang platform internal, dashboard admin, dan portal nasabah.">
+                                    Pengembangan full-stack untuk ekosistem fintech P2P Lending Sanders berbasis
+                                    CodeIgniter 3 & Vue.js, merancang platform internal, dashboard admin, dan portal
+                                    nasabah.
+                                </p>
+                                <div class="company-projects-list">
+                                    <h6 data-en="Sanders Fintech Ecosystem (CodeIgniter 3 & Vue.js):"
+                                        data-id="Ekosistem Fintech Sanders (CodeIgniter 3 & Vue.js):">Ekosistem Fintech
+                                        Sanders (CodeIgniter 3 & Vue.js):</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-cyan mt-1"
+                                                style="color: var(--accent-cyan);"></i>
+                                            <div>
+                                                <strong>Website Internal Sanders (CI3):</strong> <span
+                                                    data-en="Core internal platform for fintech operational management & loan portfolio tracking."
+                                                    data-id="Platform terpadu untuk manajemen operasional internal fintech & portofolio pinjaman.">Platform
+                                                    terpadu untuk manajemen operasional internal fintech & portofolio
+                                                    pinjaman.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-cyan mt-1"
+                                                style="color: var(--accent-cyan);"></i>
+                                            <div>
+                                                <strong>Core Backend Architecture (CI3 API):</strong> <span
+                                                    data-en="High-security RESTful API architecture for financial transaction processing."
+                                                    data-id="Engine Backend & API berkecepatan tinggi dengan sistem keamanan transaksi.">Engine
+                                                    Backend & API berkecepatan tinggi dengan sistem keamanan
+                                                    transaksi.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-cyan mt-1"
+                                                style="color: var(--accent-cyan);"></i>
+                                            <div>
+                                                <strong>Frontend Admin Dashboard (Vue.js):</strong> <span
+                                                    data-en="Centralized administrative dashboard for transaction monitoring & risk verification."
+                                                    data-id="Dashboard manajemen admin terpusat untuk monitoring transaksi & verifikasi borrower.">Dashboard
+                                                    manajemen admin terpusat untuk monitoring transaksi & verifikasi
+                                                    borrower.</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-cyan mt-1"
+                                                style="color: var(--accent-cyan);"></i>
+                                            <div>
+                                                <strong>Frontend User & Borrower Portal (Vue.js):</strong> <span
+                                                    data-en="Intuitive web application for loan application & real-time repayment tracking."
+                                                    data-id="Portal pengguna yang responsif & intuitif untuk pengajuan pinjaman & pemantauan tagihan.">Portal
+                                                    pengguna yang responsif & intuitif untuk pengajuan pinjaman &
+                                                    pemantauan tagihan.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Info Card -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="contact-card h-100">
-                        <div class="contact-card-icon"><i class="uil uil-user-circle"></i></div>
-                        <h5 data-en="Personal Info"
-                            data-id="Info Pribadi">Personal Info</h5>
-                        <p class="mb-1"><strong>Tri Putra Satriawan</strong></p>
-                        <p class="mb-1"
-                           style="font-size:14px; color:#888;">Bandung, Indonesia</p>
-                        <a href="mailto:tripsatriawan30@gmail.com"
-                           class="contact-link">
-                            <i class="uil uil-envelope"></i> tripsatriawan30@gmail.com
-                        </a>
+                        <!-- Item 3: PT Bumi Pandawa Teknologi -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge">Des 2022 - Feb 2025</span>
+                                <h4 class="timeline-role" data-en="Full Stack Web Developer"
+                                    data-id="Full Stack Web Developer">Full Stack Web Developer</h4>
+                                <div class="timeline-company">PT Bumi Pandawa Teknologi</div>
+                                <p class="timeline-text mb-3"
+                                    data-en="Engineered large-scale enterprise, state-owned enterprise (BUMN), and regional government platforms primarily with CodeIgniter 3 (CI3) and Laravel (OMDC Dental)."
+                                    data-id="Mengembangkan berbagai aplikasi enterprise, BUMN, dan pemerintah daerah dengan CodeIgniter 3 (CI3) & Laravel (khusus OMDC Dental).">
+                                    Mengembangkan berbagai aplikasi enterprise, BUMN, dan pemerintah daerah dengan
+                                    CodeIgniter 3 (CI3) & Laravel (khusus OMDC Dental).
+                                </p>
+                                <div class="company-projects-list">
+                                    <h6 data-en="Key Projects Delivered (CI3 & Laravel):"
+                                        data-id="Proyek Utama Ditangani (CI3 & Laravel):">Proyek Utama Ditangani (CI3 &
+                                        Laravel):</h6>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>Web Portal KPU Jawa Barat (CI3):</strong> <span
+                                                    data-en="Official public portal & election management information system."
+                                                    data-id="Portal resmi publik & sistem informasi penyelenggaraan pemilu KPU Jabar.">Portal
+                                                    resmi publik & sistem informasi penyelenggaraan pemilu KPU
+                                                    Jabar.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>OMDC Dental Clinic Platform (Laravel):</strong> <span
+                                                    data-en="Clinic operational management & online appointment booking platform."
+                                                    data-id="Platform manajemen operasional klinik & sistem reservasi digital OMDC Dental.">Platform
+                                                    manajemen operasional klinik & sistem reservasi digital OMDC
+                                                    Dental.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>OCM Surveyor Indonesia (CI3):</strong> <span
+                                                    data-en="Online Certification & Digital Surveillance Management (PT Surveyor Indonesia)."
+                                                    data-id="Sistem sertifikasi & pengawasan operasional digital PT Surveyor Indonesia.">Sistem
+                                                    sertifikasi & pengawasan operasional digital PT Surveyor
+                                                    Indonesia.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>SMT Surveyor Indonesia (CI3):</strong> <span
+                                                    data-en="Smart Management Tool & technical asset inspection system (PT Surveyor Indonesia)."
+                                                    data-id="Tool manajemen pintar & sistem monitoring inspeksi aset teknik PT Surveyor Indonesia.">Tool
+                                                    manajemen pintar & sistem monitoring inspeksi aset teknik PT
+                                                    Surveyor Indonesia.</span>
+                                            </div>
+                                        </li>
+                                        <li class="mb-2 d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>Jabar Quick Response (JQR) Bencana (CI3):</strong> <span
+                                                    data-en="Real-time disaster response & emergency command system."
+                                                    data-id="Sistem pusat komando & tanggap darurat bencana real-time JQR.">Sistem
+                                                    pusat komando & tanggap darurat bencana real-time JQR.</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex align-items-start gap-2">
+                                            <i class="fa-solid fa-circle-check text-warning mt-1"
+                                                style="color: var(--accent-amber);"></i>
+                                            <div>
+                                                <strong>HRIS Jabar Quick Response (CI3):</strong> <span
+                                                    data-en="Enterprise HRIS & volunteer personnel management platform."
+                                                    data-id="Sistem informasi manajemen SDM, absensi, & efisiensi relawan JQR.">Sistem
+                                                    informasi manajemen SDM, absensi, & efisiensi relawan JQR.</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"></div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge">All Time</span>
+                                <h4 class="timeline-role" data-en="Founder & Lead Developer"
+                                    data-id="Pendiri & Lead Developer">Pendiri & Lead Developer</h4>
+                                <div class="timeline-company">Techanius Agency</div>
+                                <p class="timeline-text"
+                                    data-en="Founded freelance development agency leading 35+ software projects and mentoring junior developers."
+                                    data-id="Mendirikan agensi pengembangan freelance, memimpin 35+ proyek perangkat lunak dan mentransfer keahlian coding.">
+                                    Mendirikan agensi pengembangan freelance, memimpin 35+ proyek perangkat lunak dan
+                                    mentransfer keahlian coding.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Social Card -->
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <div class="contact-card h-100">
-                        <div class="contact-card-icon"><i class="uil uil-share-alt"></i></div>
-                        <h5 data-en="Find Me On"
-                            data-id="Temukan Saya Di">Find Me On</h5>
-                        <div class="d-flex justify-content-center mt-3"
-                             style="gap:20px;">
-                            <a href="https://github.com/putrasatriawan"
-                               target="_blank"
-                               class="social-card-link">
-                                <img src="images/icon/github.png"
-                                     alt="GitHub"
-                                     width="48">
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/tri-putra-satriawan-462b33210"
-                               target="_blank"
-                               class="social-card-link">
-                                <img src="images/icon/linkedin.png"
-                                     alt="LinkedIn"
-                                     width="48">
-                                <span>LinkedIn</span>
-                            </a>
+                <!-- Education -->
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4" data-en="Education" data-id="Pendidikan">Pendidikan</h2>
+
+                    <div class="timeline-box">
+                        <!-- Educ 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"
+                                style="border-color: var(--accent-amber); box-shadow: 0 0 10px var(--accent-amber);">
+                            </div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge"
+                                    style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber);">Sep 2021 -
+                                    Sep 2025</span>
+                                <h4 class="timeline-role" data-en="S1 Informatics Engineering"
+                                    data-id="S1 Teknik Informatika">S1 Teknik Informatika</h4>
+                                <div class="timeline-company" style="color: var(--accent-amber);">ersity Bandung
+                                </div>
+                                <p class="timeline-text"
+                                    data-en="Graduated with a GPA of 3.96 / 4.00. Active in digital innovation competitions and speaker on 'Kerja Sambil Kuliah' podcast."
+                                    data-id="Lulus Sarjana Teknik Informatika dengan IPK 3.96 / 4.00. Aktif dalam kompetisi inovasi digital & pembicara podcast.">
+                                    Lulus Sarjana Teknik Informatika dengan IPK 3.96 / 4.00. Aktif dalam kompetisi
+                                    inovasi digital & pembicara podcast.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Educ 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-node"
+                                style="border-color: var(--accent-amber); box-shadow: 0 0 10px var(--accent-amber);">
+                            </div>
+                            <div class="glass-card timeline-item-card">
+                                <span class="timeline-year-badge"
+                                    style="background: rgba(245, 158, 11, 0.12); color: var(--accent-amber);">Mar 2018 -
+                                    Jun 2021</span>
+                                <h4 class="timeline-role" data-en="Software Engineering"
+                                    data-id="Rekayasa Perangkat Lunak (RPL)">Rekayasa Perangkat Lunak (RPL)</h4>
+                                <div class="timeline-company" style="color: var(--accent-amber);">SMK Bakti Nusantara
+                                    666</div>
+                                <p class="timeline-text"
+                                    data-en="Specialized in software development. Final thesis project scored 98/100."
+                                    data-id="Spesialisasi rekayasa perangkat lunak. Nilai ujian praktik keahlian proyek akhir: 98/100.">
+                                    Spesialisasi rekayasa perangkat lunak. Nilai ujian praktik keahlian proyek akhir:
+                                    98/100.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                <div>
+                    <h2 class="section-title" data-en="Featured Projects" data-id="Portofolio Proyek">Portofolio Proyek
+                    </h2>
+                    <p class="section-subtitle mb-0"
+                        data-en="Showcase of enterprise applications and client solutions I've developed."
+                        data-id="Daftar proyek perusahaan dan aplikasi custom yang telah saya kembangkan.">Daftar proyek
+                        perusahaan dan aplikasi custom yang telah saya kembangkan.</p>
+                </div>
+            </div>
+
+            <!-- Tab Filters -->
+            <div class="filter-nav">
+                <button class="filter-btn active" onclick="filterProjects('all', this)" data-en="All Projects"
+                    data-id="Semua Proyek">Semua Proyek</button>
+                <button class="filter-btn" onclick="filterProjects('company', this)" data-en="Company / Enterprise"
+                    data-id="Proyek Perusahaan">Proyek Perusahaan</button>
+                <button class="filter-btn" onclick="filterProjects('freelance', this)" data-en="Freelance (Techanius)"
+                    data-id="Freelance (Techanius)">Freelance (Techanius)</button>
+                <button class="filter-btn" onclick="filterProjects('backend', this)" data-en="Backend & API"
+                    data-id="Backend & API">Backend & API</button>
+                <button class="filter-btn" onclick="filterProjects('fullstack', this)" data-en="Full-Stack"
+                    data-id="Full-Stack">Full-Stack</button>
+            </div>
+
+            <div class="row g-4" id="projects-grid">
+
+                <!-- Company Project 1: Ayo Siswa -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company backend fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/work/1.png', 'Ayo Siswa', 'Platform Manajemen Sekolah Komprehensif (PT Rahadhyan)')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/work/1.png" alt="Ayo Siswa">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured" data-en="PT Rahadhyan" data-id="PT Rahadhyan">PT
+                                    Rahadhyan</span>
+                                <span class="badge-role" data-en="Backend Developer" data-id="Backend Developer">Backend
+                                    Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="Ayo Siswa - Comprehensive School Platform"
+                                data-id="Ayo Siswa - Platform Manajemen Sekolah Lengkap">Ayo Siswa - Platform Manajemen
+                                Sekolah Lengkap</h5>
+                            <p class="project-desc"
+                                data-en="Full-featured platform for school needs including student management, attendance tracking, grading system, and parent portal. Built for PT Rahadhyan Integrasi Nusantara."
+                                data-id="Infrastruktur API & platform sekolah komprehensif termasuk manajemen siswa, absensi, penilaian, dan portal orang tua di PT Rahadhyan Integrasi Nusantara.">
+                                Infrastruktur API & platform sekolah komprehensif termasuk manajemen siswa, absensi,
+                                penilaian, dan portal orang tua di PT Rahadhyan Integrasi Nusantara.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Project 2: Ayo Muslim -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company backend">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/work/2.png', 'Ayo Muslim', 'Aplikasi Pendamping Islami (PT Rahadhyan)')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/work/2.png" alt="Ayo Muslim">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured" data-en="PT Rahadhyan" data-id="PT Rahadhyan">PT
+                                    Rahadhyan</span>
+                                <span class="badge-role" data-en="Backend Developer" data-id="Backend Developer">Backend
+                                    Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="Ayo Muslim - Islamic Companion App"
+                                data-id="Ayo Muslim - API & Aplikasi Pendamping Islami">Ayo Muslim - API & Aplikasi
+                                Pendamping Islami</h5>
+                            <p class="project-desc"
+                                data-en="Comprehensive Islamic platform with Quran, Hadith, prayer consultation, and dhikr counter. High-performance backend API with optimized Redis caching."
+                                data-id="Scalable RESTful API & platform Islami komprehensif (Al-Qur'an, Hadist, konsultasi agama, & jadwal sholat) dengan Redis caching.">
+                                Scalable RESTful API & platform Islami komprehensif (Al-Qur'an, Hadist, konsultasi
+                                agama, & jadwal sholat) dengan Redis caching.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">NestJS</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Project 3: API Yourpacker -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company backend">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/work/1.png', 'API Yourpacker', 'Platform Logistik & Travel Management (PT Rahadhyan)')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/work/1.png" alt="Yourpacker API">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured" data-en="PT Rahadhyan" data-id="PT Rahadhyan">PT
+                                    Rahadhyan</span>
+                                <span class="badge-role" data-en="Backend Developer" data-id="Backend Developer">Backend
+                                    Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="API Yourpacker - Logistics & Travel Platform"
+                                data-id="API Yourpacker - Platform Logistik & Travel">API Yourpacker - Platform Logistik
+                                & Travel</h5>
+                            <p class="project-desc"
+                                data-en="High-availability RESTful API architecture powering logistics shipment tracking, route calculation, and travel booking services."
+                                data-id="Arsitektur RESTful API berkecepatan tinggi untuk pelacakan ekspedisi barang, kalkulasi rute, dan pemesanan tiket perjalanan.">
+                                Arsitektur RESTful API berkecepatan tinggi untuk pelacakan ekspedisi barang, kalkulasi
+                                rute, dan pemesanan tiket perjalanan.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Golang</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Project 4: Sanders Fintech Ecosystem -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company backend fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/2.png', 'Sanders Fintech Ecosystem', 'Platform Sanders (Internal, Core BE, Admin FE, User FE)')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/2.png" alt="Sanders Fintech Ecosystem">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured"
+                                    style="background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan);"
+                                    data-en="Sanders Fintech" data-id="Sanders Fintech">Sanders Fintech</span>
+                                <span class="badge-role" data-en="Full Stack Developer"
+                                    data-id="Full Stack Developer">Full Stack Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="Sanders P2P Lending Fintech Ecosystem"
+                                data-id="Sanders - Ekosistem Fintech P2P Lending">Sanders - Ekosistem Fintech P2P
+                                Lending</h5>
+                            <p class="project-desc"
+                                data-en="Complete P2P Lending suite consisting of Internal Company Website, Core Backend APIs, Centralized Admin Dashboard, and User/Borrower Portal. Built with CodeIgniter 3 and Vue.js."
+                                data-id="Pengembangan ekosistem fintech P2P Lending (Website Internal, Core Backend API, Dashboard Admin, & Portal Borrower) berbasis CodeIgniter 3 & Vue.js.">
+                                Pengembangan ekosistem fintech P2P Lending (Website Internal, Core Backend API,
+                                Dashboard Admin, & Portal Borrower) berbasis CodeIgniter 3 & Vue.js.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter 3</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">P2P Fintech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Project 5: PT Bumi Pandawa - KPU Jabar & JQR -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/1.png', 'Web KPU Jabar & JQR', 'PT Bumi Pandawa Teknologi')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/1.png" alt="KPU Jabar & JQR Platform">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured"
+                                    style="background: rgba(245, 158, 11, 0.2); color: var(--accent-amber);"
+                                    data-en="Bumi Pandawa" data-id="Bumi Pandawa">Bumi Pandawa</span>
+                                <span class="badge-role" data-en="Full Stack Developer"
+                                    data-id="Full Stack Developer">Full Stack Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="Web KPU Jabar & JQR Disaster Command"
+                                data-id="Web KPU Jabar & JQR Tanggap Bencana">Web KPU Jabar & JQR Tanggap Bencana</h5>
+                            <p class="project-desc"
+                                data-en="Public information web portal for KPU West Java elections, real-time disaster emergency response system for Jabar Quick Response, and Volunteer HRIS built with CodeIgniter 3."
+                                data-id="Portal publik & informasi pemilu KPU Jawa Barat, sistem tanggap darurat bencana real-time Jabar Quick Response, serta HRIS Relawan dikembangkan dengan CodeIgniter 3.">
+                                Portal publik & informasi pemilu KPU Jawa Barat, sistem tanggap darurat bencana
+                                real-time Jabar Quick Response, serta HRIS Relawan dikembangkan dengan CodeIgniter 3.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter 3</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Command Center</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Project 6: PT Bumi Pandawa - Surveyor Indonesia & OMDC -->
+                <div class="col-lg-6 col-md-6 mb-4 project-item" data-category="company backend fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/4.png', 'Surveyor Indonesia & OMDC', 'PT Bumi Pandawa Teknologi')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/4.png" alt="Surveyor Indonesia & OMDC Dental">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge-featured"
+                                    style="background: rgba(245, 158, 11, 0.2); color: var(--accent-amber);"
+                                    data-en="Bumi Pandawa" data-id="Bumi Pandawa">Bumi Pandawa</span>
+                                <span class="badge-role" data-en="Full Stack Developer"
+                                    data-id="Full Stack Developer">Full Stack Developer</span>
+                            </div>
+                            <h5 class="project-title" data-en="OCM/SMT Surveyor Indonesia & OMDC Dental"
+                                data-id="OCM & SMT Surveyor Indonesia & OMDC Dental">OCM & SMT Surveyor Indonesia & OMDC
+                                Dental</h5>
+                            <p class="project-desc"
+                                data-en="Digital Certification (OCM) & Smart Monitoring Tool (SMT) for PT Surveyor Indonesia built with CodeIgniter 3, and OMDC Dental Clinic Platform built with Laravel."
+                                data-id="Sistem Sertifikasi Digital (OCM) & Smart Monitoring Tool (SMT) PT Surveyor Indonesia (CodeIgniter 3), serta platform klinik OMDC Dental (Laravel).">
+                                Sistem Sertifikasi Digital (OCM) & Smart Monitoring Tool (SMT) PT Surveyor Indonesia
+                                (CodeIgniter 3), serta platform klinik OMDC Dental (Laravel).
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter 3 (OCM/SMT)</span>
+                                <span class="tech-tag">Laravel (OMDC)</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Project 1: Xorix Outdoor -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="freelance backend fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/7.png', 'Xorix Outdoor', 'Platform E-Commerce Lengkap')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/7.png" alt="Xorix Outdoor">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="badge-role" data-en="Backend Developer" data-id="Backend Developer">Backend
+                                Developer</span>
+                            <h5 class="project-title">Xorix Outdoor</h5>
+                            <p class="project-desc"
+                                data-en="E-commerce website with complete payment gateway integration and automated shipping calculation system."
+                                data-id="Website e-commerce outdoor lengkap dengan integrasi payment gateway dan sistem manajemen pengiriman otomatis.">
+                                Website e-commerce outdoor lengkap dengan integrasi payment gateway dan sistem manajemen
+                                pengiriman otomatis.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Project 2: Geolocation Attendance -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="freelance fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/1.png', 'Geolocation Attendance', 'Sistem Absensi Geolokasi & Penggajian')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/1.png" alt="Geolocation Attendance System">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="badge-role" data-en="Full Stack Developer" data-id="Full Stack Developer">Full
+                                Stack Developer</span>
+                            <h5 class="project-title" data-en="Geolocation Attendance & Payroll"
+                                data-id="Absensi Geolokasi & Penggajian">Absensi Geolokasi & Penggajian</h5>
+                            <p class="project-desc"
+                                data-en="Geolocation-based attendance and payroll management system built for SMA YPKKP Bandung."
+                                data-id="Sistem absensi berbasis geolokasi dan manajemen penggajian otomatis untuk SMA YPKKP Bandung.">
+                                Sistem absensi berbasis geolokasi dan manajemen penggajian otomatis untuk SMA YPKKP
+                                Bandung.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Geolocation API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Project 3: School Payment -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="freelance fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/5.png', 'Baknus School Payment', 'Sistem Pembayaran SPP Sekolah')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/5.png" alt="Baknus School Payment System">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="badge-role" data-en="Full Stack Developer" data-id="Full Stack Developer">Full
+                                Stack Developer</span>
+                            <h5 class="project-title" data-en="Baknus School Payment System"
+                                data-id="Sistem Pembayaran Sekolah Baknus">Sistem Pembayaran Sekolah Baknus</h5>
+                            <p class="project-desc"
+                                data-en="School payment management system for tuition fees and financial reporting."
+                                data-id="Sistem manajemen pembayaran SPP sekolah dan laporan keuangan otomatis.">
+                                Sistem manajemen pembayaran SPP sekolah dan laporan keuangan otomatis.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Project 4: Edutrack -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="freelance fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/6.png', 'Edutrack Platform', 'Platform Penilaian Pendidikan')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/6.png" alt="Edutrack Platform">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="badge-role" data-en="Full Stack Developer" data-id="Full Stack Developer">Full
+                                Stack Developer</span>
+                            <h5 class="project-title" data-en="Edutrack Assessment Platform"
+                                data-id="Edutrack - Assessment Platform">Edutrack - Assessment Platform</h5>
+                            <p class="project-desc"
+                                data-en="Educational assessment questionnaire platform recommending personalized study paths."
+                                data-id="Platform kuesioner penilaian pendidikan yang memberikan rekomendasi jalur studi terpersonalisasi.">
+                                Platform kuesioner penilaian pendidikan yang memberikan rekomendasi jalur studi
+                                terpersonalisasi.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">CodeIgniter</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelance Project 5: Wedding Invitation -->
+                <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="freelance fullstack">
+                    <div class="glass-card project-card"
+                        onclick="openLightbox('porto/freelance/3.png', 'Wedding Invitation', 'Platform Undangan Digital')">
+                        <div class="project-img-wrapper">
+                            <img src="porto/freelance/3.png" alt="Wedding Invitation Platform">
+                            <div class="project-overlay">
+                                <div class="project-overlay-btn"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <span class="badge-role" data-en="Full Stack Developer" data-id="Full Stack Developer">Full
+                                Stack Developer</span>
+                            <h5 class="project-title" data-en="Wedding Invitation Platform"
+                                data-id="Platform Undangan Digital">Platform Undangan Digital</h5>
+                            <p class="project-desc"
+                                data-en="Customizable digital wedding invitation platform with interactive RSVP."
+                                data-id="Platform undangan digital interaktif dengan fitur konfirmasi kehadiran RSVP.">
+                                Platform undangan digital interaktif dengan fitur konfirmasi kehadiran RSVP.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">HTML5 / CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+        </div>
+    </section>
 
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="text-center max-w-2xl mx-auto mb-5">
+                <h2 class="section-title" data-en="Get In Touch" data-id="Hubungi Saya">Hubungi Saya</h2>
+                <p class="section-subtitle"
+                    data-en="Feel free to reach out for career opportunities, freelance projects, or tech collaborations."
+                    data-id="Terbuka untuk diskusi proyek, peluang karir full-time, atau konsultasi teknologi.">Terbuka
+                    untuk diskusi proyek, peluang karir full-time, atau konsultasi teknologi.</p>
+            </div>
 
+            <div class="row g-4 justify-content-center">
+                <!-- Personal Info Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="glass-card contact-card-box">
+                        <i class="fa-solid fa-envelope-open-text contact-icon-large"></i>
+                        <h4 class="mb-2">Email Direct</h4>
+                        <p class="text-muted mb-2">Tri Putra Satriawan</p>
+                        <p class="font-mono text-white mb-3" style="font-size: 0.92rem;">tripsatriawan30@gmail.com</p>
 
+                        <button class="copy-btn" onclick="copyEmail('tripsatriawan30@gmail.com')">
+                            <i class="fa-regular fa-copy"></i>
+                            <span data-en="Copy Email Address" data-id="Salin Alamat Email">Salin Alamat Email</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Personal Profiles Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="glass-card contact-card-box">
+                        <i class="fa-solid fa-user-astronaut contact-icon-large" style="color: var(--accent-cyan);"></i>
+                        <h4 class="mb-2" data-en="Personal Profiles" data-id="Profil Personal">Profil Personal</h4>
+                        <p class="text-muted mb-3" data-en="Connect with me on LinkedIn and GitHub."
+                            data-id="Terhubung dengan saya di LinkedIn & GitHub.">Terhubung dengan saya di LinkedIn &
+                            GitHub.</p>
+
+                        <div class="d-flex flex-column gap-2" style="gap:10px;">
+                            <a href="https://github.com/putrasatriawan" target="_blank" class="social-link-card"
+                                style="padding: 12px 16px;">
+                                <i class="fa-brands fa-github" style="font-size: 1.2rem;"></i>
+                                <span>GitHub / putrasatriawan</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tri-putra-satriawan-462b33210" target="_blank"
+                                class="social-link-card" style="padding: 12px 16px;">
+                                <i class="fa-brands fa-linkedin" style="font-size: 1.2rem; color: #0a66c2;"></i>
+                                <span>LinkedIn / Tri Putra Satriawan</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Techanius Official Platforms Card -->
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="glass-card contact-card-box"
+                        style="border-color: var(--border-amber); background: linear-gradient(145deg, rgba(245, 158, 11, 0.08) 0%, rgba(18, 22, 36, 0.8) 100%);">
+                        <i class="fa-solid fa-rocket contact-icon-large" style="color: var(--accent-amber);"></i>
+                        <h4 class="mb-2" style="color: var(--accent-amber);">Techanius Platforms</h4>
+                        <p class="text-muted mb-3" data-en="Explore Techanius agency on social media & web."
+                            data-id="Kunjungi platform resmi Techanius di sosial media & web.">Kunjungi platform resmi
+                            Techanius di sosial media & web.</p>
+
+                        <div class="d-flex flex-column gap-2" style="gap:10px;">
+                            <a href="https://instagram.com/techanius" target="_blank" class="social-link-card"
+                                style="padding: 12px 16px; border-color: rgba(225, 48, 108, 0.3);">
+                                <i class="fa-brands fa-instagram" style="font-size: 1.2rem; color: #e1306c;"></i>
+                                <span>Instagram / @techanius</span>
+                            </a>
+                            <a href="https://tiktok.com/@techanius" target="_blank" class="social-link-card"
+                                style="padding: 12px 16px;">
+                                <i class="fa-brands fa-tiktok" style="font-size: 1.2rem; color: #fff;"></i>
+                                <span>TikTok / @techanius</span>
+                            </a>
+                            <a href="https://techanius.com" target="_blank" class="social-link-card"
+                                style="padding: 12px 16px; border-color: var(--border-amber); color: var(--accent-amber);">
+                                <i class="fa-solid fa-globe" style="font-size: 1.2rem; color: var(--accent-amber);"></i>
+                                <span>Website / techanius.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer py-5">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-12">
-                    <p class="copyright-text text-center"
-                       data-en="Made With Love By Putra"
-                       data-id="Dibuat Dengan Cinta Oleh Putra">Made With Love By Putra</p>
-                </div>
-            </div>
+            <p class="mb-0" data-en="Designed & Built with Precision by Tri Putra Satriawan"
+                data-id="Dirancang & Dikembangkan Oleh Tri Putra Satriawan">Dirancang & Dikembangkan Oleh Tri Putra
+                Satriawan</p>
         </div>
     </footer>
 
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="lightbox-img-box">
+                <img id="lightbox-img" src="" alt="Project Preview">
+            </div>
+            <div class="p-4">
+                <h4 id="lightbox-title" class="m-0" style="color: var(--text-main);"></h4>
+                <p id="lightbox-subtitle" class="mt-2 mb-0" style="color: var(--text-muted); font-size: 0.95rem;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST ALERT -->
+    <div id="toast" class="toast-msg">
+        <i class="fa-solid fa-check-circle mr-2"></i> Email berhasil disalin!
+    </div>
+
+    <!-- JS Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
 
     <script>
-        // ── Lightbox ─────────────────────────────────────────────
-        function openLightbox(src) {
-            var lb = document.getElementById('lightbox');
-            document.getElementById('lightbox-img').src = src;
-            lb.style.display = 'flex';
+        // ── Dynamic Morphing Text ──────────────────────────────────────
+        const roles = [
+            "Backend Developer",
+            "Full-Stack Engineer",
+            "API & System Architect",
+            "Founder @ Techanius"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const roleTextEl = document.getElementById("role-text");
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            if (isDeleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
+
+            roleTextEl.textContent = currentRole.substring(0, charIndex);
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000; // Pause at full word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            typeEffect();
+        });
+
+        // ── Project Filtering ─────────────────────────────────────────
+        function filterProjects(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const items = document.querySelectorAll('.project-item');
+            items.forEach(item => {
+                const itemCats = item.getAttribute('data-category');
+                if (category === 'all' || itemCats.includes(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // ── Lightbox Modal ───────────────────────────────────────────
+        function openLightbox(src, title, subtitle) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox-title').textContent = title || '';
+            document.getElementById('lightbox-subtitle').textContent = subtitle || '';
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
+
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') closeLightbox();
         });
 
-        // ── Language Toggle ──────────────────────────────────────────
-        var currentLang = 'id';
+        // ── Copy Email Toast Notification ─────────────────────────────
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            });
+        }
+
+        // ── Language Toggle (ID / EN) ──────────────────────────────────
+        let currentLang = 'id';
 
         function setLang(lang) {
             currentLang = lang;
@@ -1754,32 +1286,30 @@
             document.getElementById('btn-id').classList.toggle('active', lang === 'id');
 
             document.querySelectorAll('[data-en]').forEach(function (el) {
-                var val = el.getAttribute('data-' + lang);
+                const val = el.getAttribute('data-' + lang);
                 if (val) el.innerHTML = val;
             });
 
-            // Update nav data-hover attributes
-            document.querySelectorAll('.nav-link span[data-hover]').forEach(function (el) {
-                var id = el.getAttribute('data-hover-id');
-                var map = {
-                    'nav-about': { en: 'About', id: 'Tentang' },
-                    'nav-skills': { en: 'Skills', id: 'Keahlian' },
-                    'nav-portfolio': { en: 'Portfolio', id: 'Portofolio' },
-                    'nav-resume': { en: 'Resume', id: 'Riwayat' },
-                    'nav-contact': { en: 'Contact', id: 'Kontak' }
-                };
-                if (id && map[id]) {
-                    el.setAttribute('data-hover', map[id][lang]);
-                    el.textContent = map[id][lang];
+            // Update nav translations
+            const navMap = {
+                'nav-about': { en: 'About', id: 'Tentang' },
+                'nav-skills': { en: 'Skills', id: 'Keahlian' },
+                'nav-portfolio': { en: 'Portfolio', id: 'Portofolio' },
+                'nav-resume': { en: 'Resume', id: 'Riwayat' },
+                'nav-contact': { en: 'Contact', id: 'Kontak' }
+            };
+
+            document.querySelectorAll('.nav-link span[data-hover-id]').forEach(function (el) {
+                const id = el.getAttribute('data-hover-id');
+                if (id && navMap[id]) {
+                    el.textContent = navMap[id][lang];
                 }
             });
         }
 
-        // Set default language to Indonesian on page load
         window.addEventListener('load', function () {
             setLang('id');
         });
-
     </script>
 </body>
 
